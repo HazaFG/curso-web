@@ -1,0 +1,58 @@
+/*
+Selectores simples
+    Selectores elementales
+        selector universal -> *
+        selector de tipo etiqueta -> nombre etiqueta
+
+    selectores de atributos
+        id -> id del elemento
+        clase -> clase del elemento
+        otros atributos.
+            [atributo]
+            [atributo = valor]
+            [atributo^=valor]
+*/
+
+
+/*
+Selectores compuestos
+    Selectores agrupados
+    selectores combinadores
+
+    pseuidaclases
+    pseudoelementos 
+*/
+
+
+/*
+#title{
+    background-color: lightblue;
+}
+
+.title{
+    background-color: red;
+}
+
+.texto{
+    background-color: aquamarine;
+}
+*/
+
+
+
+
+[href]{
+    background-color: #0a8cbd;
+}
+
+[href="holamundo.com"]{
+    background-color: pink;
+}
+
+
+
+
+
+
+
+

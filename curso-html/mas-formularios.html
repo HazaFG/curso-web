@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas etiquetas para formularios</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" id="name">
+                <label for="surname">Apellidos</label>
+                <input type="text" name="" id="surname">
+            </div>
+            
+        </fieldset>
+
+        <input type="file" name="" id="">
+        <label for="fuel">Combustible</label>
+        <meter id="fuel" min="0" max="100" value="10" low = "30" high="75" optimum="50"></meter>
+        <label for="task">Tarea 1</label>
+        <progress id="task" max="100" value="75"></progress>
+
+        <label for="message">Asunto: </label>
+        <textarea name="" id="message" cols="20" rows="5"></textarea>
+    </form>
+</body>
+</html>

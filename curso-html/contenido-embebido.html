@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido embebido</title>
+
+    <style>
+        video {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contenido embebido</h1>
+    <img srcset="/assets/images/monoplaza.webp, 
+    /assets/images/mercedespng.png 2x" alt="">
+
+    <picture>
+        <!--<source srcset="/assets/images/monoplaza.webp, 
+        /assets/images/mercedespng.png">
+        <source srcset="/assets/images/download.jpeg" media="(max-width:1200px)">
+        <img src="/assets/images/monoplaza.webp" alt=""> -->
+
+
+    </picture>
+
+    <audio src="/assets/audios/cancion2.mp3" controls autoplay muted></audio>
+
+    <video src="/assets/videos/video.mp4" controls muted loop poster="/assets/images/mercedespng.png"></video>
+
+    <h2>Gatos</h2>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod dolor alias ipsum beatae necessitatibus eum quas maxime sequi vitae quo optio, vero sit mollitia quisquam minus doloremque ipsa neque maiores.</p>
+
+    <figure>
+        <img src="/assets/images/gato.png" alt="Gato feo">
+        <figcaption>Gato feo</figcaption>
+    </figure>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+/*
+Selectores simples
+    Selectores elementales
+        selector universal -> *
+        selector de tipo etiqueta -> nombre etiqueta
+
+    selectores de atributos
+*/
+
+
+/*
+Selectores compuestos
+    Selectores agrupados
+    selectores combinadores
+
+    pseuidaclases
+    pseudoelementos 
+*/
+
+*{
+    background-color: brown;
+}
+
+h1{
+    background-color: white;
+}
+
+p{
+    background-color: grey;
+}
+
+ul{
+    background-color: aqua;
+}
+
+li{
+    background-color: blue;
+}
