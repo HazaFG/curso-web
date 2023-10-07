@@ -1,0 +1,26 @@
+
+body{
+    background-color: #333;
+}
+
+.title{
+    color: brown;
+    font-size: 10px;
+}
+
+.text{
+    color: green;
+}
+
+.link{
+    color: inherit; /*CON ESTO FORZAMOS LA HERENCIA */
+}
+
+.list{
+    color: indianred;
+}
+
+.list-item-extra{ 
+    /* VUELE A SU ESTADO INICIAL, SI TIEN HERENCIA, IGNORALO */
+    color: initial;
+}

@@ -1,0 +1,8 @@
+.text-2 + .title-2{
+    background-color: teal;
+}
+
+.text-2 ~ p{
+    background-color: aquamarine;
+}
+
