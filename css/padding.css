@@ -1,0 +1,56 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+header{
+    background-color: red;
+}
+
+body{
+    background-color: #333;
+    color: #ffffff;
+    margin: 0;
+}
+
+.title{
+    /* background-color: lightcoral; */
+    width: 300px;
+}
+
+.block{
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 50px 20px; 50 arriba y abajo, y 20 a los lados */
+    /* padding: 50px 20px 100px; 50 arriba, 20 a los lados y 100 abajo */
+    /* padding: 50px 20px 100px 70px; */
+
+}
+
+.inline{
+    background-color: lightcoral;
+    color: inherit;
+    /* width: 150px;  Recuerda que width y height no sirven para los elementos de linea  */
+    padding-left: 100px;
+    margin-left: 100px;
+}
+
+.boton-contenedor{
+    background-color: antiquewhite;
+    padding: 30px;
+}
+
+.boton{
+    padding: 30px;
+    margin-left: 100px;
+    background-color: chocolate;
+    border: 20px solid white;
+    border-width: 20px;
+    border-style: solid;
+    border-color: white;
+    border-right-color: #333;
+    border-right-width: 10px;
+}
