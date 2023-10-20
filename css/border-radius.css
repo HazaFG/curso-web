@@ -25,22 +25,28 @@ body{
     width: 300px;
 }
 
-.block{
+.box{
     background-color: purple;
     width: 200px;
     height: 200px;
     margin-left: auto;
     margin-right: auto;
-
     padding: 20px;
     box-sizing: border-box;
-    border: 5px solid red;
-    /* border: 20px; */
+    /* border-radius: 50px; */
+    /*border: 5px solid red;
+    *//*border: 20px;
+    *//*padding: 50px 20px;
+    50arribayabajo,y20aloslados*//*padding: 50px 20px 100px;
+    50arriba,20alosladosy100abajo*//*padding: 50px 20px 100px 70px;
+    */
+    /* -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px; */
 
-
-    /* padding: 50px 20px; 50 arriba y abajo, y 20 a los lados */
-    /* padding: 50px 20px 100px; 50 arriba, 20 a los lados y 100 abajo */
-    /* padding: 50px 20px 100px 70px; */
+    overflow-y: scroll;
+    overflow-x: hidden;
 
 }
 
@@ -50,4 +56,9 @@ body{
     /* width: 150px;  Recuerda que width y height no sirven para los elementos de linea  */
     padding-left: 100px;
     margin-left: 100px;
+}
+
+.text{
+    width: 500px;
+    background-color: rgb(7, 19, 30);
 }
