@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* margin: 0; */
+    background-color: #333;
+    color: white;
+}
+
+.text{
+    text-align: justify;
+}
+
+.link{
+    color: aliceblue;
+    display: block; /*SI LE DAMOS UN DISPLAY BLOCK SE COMPORTARA COMO ELEMENTO DE BLOQUE, YA QUE TEXT ALIGN SOLO SIRVE PARA CENTRAR ELEMENTOS DE LINEA, NO DE BLOQUE*/
+
+    /* CON DISPLAY:INLINE BLOCK TEXT ALIGN NO FUNCIONA */
+
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: rgb(79, 49, 13);
+    width: 200px;
+}
+
+.box{
+    background-color: rgb(154, 169, 169);
+    width: 100px;
+    height: 60px;
+    padding: 17px;
+    margin: 20px 30px;
+    border: 5px red solid;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-container{
+    text-align: center;
+}
+
+.img{
+    /* display: block; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* text-align: center; */
+}
+
+

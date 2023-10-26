@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: aliceblue;
+    margin: 0;
+}
+
+.f1{
+    width: 100%;
+    display: block;
+}
+
+header{
+    text-align: center;
+    background-color: lightblue;
+    color: red;
+    /* height: 100px; */
+    /* position: sticky;
+    top: 0; */
+    height: 400px; /*SIEMPRE SE VA QUEDAR FIJADO LA CANTIDAD DE PIXELES QUE SE LE INDIQUE, OJITO AL DATO*/
+
+    /* La propiedad overflow mata al position STICKY ASI QUE CUIDADO */
+}
+
+.menu{
+    position: sticky;
+    top: 0;
+}
+
+.article-title{
+    position: sticky;
+    top: 0px;
+    background-color: red;
+    margin: 0;
+}
+
+
+.box{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
+.container{
+    background-color: lightskyblue;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.box-1{
+    background-color: lightcoral;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.box-2{
+    background-color: lightgreen;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
