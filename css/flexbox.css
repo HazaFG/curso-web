@@ -9,7 +9,7 @@ body{
 
 .parent{
     display: flex; /*SIEMPRE DEBE DE IR EN EL PADRE*/
-    /*flex-direction: column; /*<- ESTE ES EL EJE PRINCIPAL, SIEMPRE*/
+    flex-direction: column; /*<- ESTE ES EL EJE PRINCIPAL, SIEMPRE*/
     /* direction: rtl; */
     flex-flow: nowrap; /*Esto nos va a alinear en linea aunque esten en column jaja*/
     /* Si ponemos wrap, si no cabe hara un salto de linea */
@@ -20,7 +20,7 @@ body{
     justify-content: center; /*<-- ESTE NACO SIEMPRE SE USA PARA ROW*/
     align-items: center; /*ESTE PARA ALINEAR A COL*/
 
-    align-content:flex-start; /*ESTO ES A NIVEL DE TODO EL CONTENIDO, ABSOLUTAMENTE TODO EL CONTENIDO*/
+    align-content:center; /*ESTO ES A NIVEL DE TODO EL CONTENIDO, ABSOLUTAMENTE TODO EL CONTENIDO*/
 
     gap: 1rem;
 }
