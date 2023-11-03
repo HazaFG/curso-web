@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333;
+}
+
+.parent{
+    display: flex; /*SIEMPRE DEBE DE IR EN EL PADRE*/
+    /*flex-direction: column; /*<- ESTE ES EL EJE PRINCIPAL, SIEMPRE*/
+    /* direction: rtl; */
+    flex-flow: nowrap; /*Esto nos va a alinear en linea aunque esten en column jaja*/
+    /* Si ponemos wrap, si no cabe hara un salto de linea */
+    border: solid black 4px;
+    width: 250px;
+    height: 400px;
+
+    justify-content: center; /*<-- ESTE NACO SIEMPRE SE USA PARA ROW*/
+    align-items: center; /*ESTE PARA ALINEAR A COL*/
+
+    align-content:flex-start; /*ESTO ES A NIVEL DE TODO EL CONTENIDO, ABSOLUTAMENTE TODO EL CONTENIDO*/
+
+    gap: 1rem;
+}
+
+.item{
+    border: 1px solid;
+    opacity: .9;
+    width: 50px;
+    height: 50px;
+    background-color: #09f;
+
+    /* Valores por defecto 
+    flex-grow: 1; /*Los elementos crecen, pero al ritmo de su tamano (0)
+    flex-shrink: 1;
+    /* Todos lo elementos tendran el mismo ancho 
+    flex-basis: auto;
+
+    flex: 1; /*ESTE ES EL RESUMEN DE TODO LO DE ARRIBA, Y LO QUE TE RECOMIENDO JEJE*/
+
+
+}
+
+.item:first-child{
+    background-color: yellow;
+    /*flex: 1; /*Con esto podemos hacer que tenga el doble del espacio que los otros elementos*/
+    /* order: 3; */
+    height: 40px;
+}
+
+.item:nth-child(2),
+.item:nth-child(5){
+    background-color: blue;
+    /* flex: 2; */
+    /* order: 1; */
+    height: 30px;
+    align-self: flex-start;
+}
+
+.item:last-child{
+    background-color: red;
+    /* flex: 1; */
+    /* margin-right: 10px; */
+    height: 20px;
+}
