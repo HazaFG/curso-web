@@ -34,7 +34,9 @@ body{
     /* padding: 20px; */
     /* box-sizing: border-box; */
     border-radius: 50px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-y: scroll;
+    overflow-x: hidden;
     /*overflow: auto;
     *//*border-radius: 50px;
     *//*border: 5px solid red;
