@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos, video del 1 al 10</title>
+</head>
+<body>
+    
+    <h1>Fundamentos Javascript</h1>
+
+    <script>
+        // var hola = "Hola mundo"; // Si las declaras aqui se van a declarar siempre de manera global
+
+        // let hello = "Hola mundo con let, no vuelvas a usar var"
+        // console.log(hola)
+        // console.log(hello)
+        // console.log(window)
+
+        // // Ambito de clase
+        // var musica = "Rock"
+
+        // console.log("variable musica antes del bloque", musica)
+
+        // //Esto es un bloque
+
+        // {
+        //     var musica = "Pop"
+        //     console.log("variable musica dentro del bloque", musica)
+        // }
+
+        // console.log("Variable musica despues del bloque", musica)
+
+        // //Aqui empezamos a usar let
+
+        // console.log("*********************************************************")
+
+        // let musica2 = "Rock"
+
+        // console.log("variable musica antes del bloque", musica2)
+
+        // //Esto es un bloque
+
+        // {
+        //     let musica2 = "Pop"
+        //     console.log("variable musica dentro del bloque", musica2)
+        // }
+
+        // console.log("Variable musica despues del bloque", musica2)
+
+
+        // constantes ----------------------------------------------------------------
+
+        // las constantes no funcionan igyal en los tipos de dstos promitivos que en los compouestos
+
+        // EN LOS TIPOS DE DSTOS PRIMITIVOS ACCEDO DIRECTAMENTE AL VALOR, SI YO IMPRIMO UN NUMERO ME SALE
+
+
+        // LOS OBJETOS Y LOS ARREGLOS SON VALORES COMPUESTOS, NO ESTAMOS ACCEDIENDO AL VALOR DIRECTAMENTE, SINO A UNA REFERENCIA
+
+        // let a;
+
+        // const PI = 3.1416;
+        // // const NUEVE; NO SE PUEDE DECLARAR CON UN VALOR VACIO
+        // console.log(PI)
+        // // PI = 3.9 TAMPOCO PUEDES REASIGNAR UN VALOR A LA CONSTANTE
+
+        // a = "kenai"
+        // console.log(a)
+
+        // // un objeto es una coleccion de atributos y valores\
+
+
+        // // ESTO ANTES NO ERA CONST, ERA LET, PERO LO CAMBIASTE A CONST PARA CORROBORAR QUE AL CAMBIARLO A CONST ESTE NO IBA A DAR ERROR
+
+        // const objeto = {
+        //     nombre:"Hazael",
+        //     edad:21
+        // }
+
+        // // UN ARREGLO ES UNA COLECCION DE DATOS
+        // const colores = ["blanco", "negro", "azul"]
+
+        // console.log(objeto)
+        // console.log(colores)
+
+
+        // objeto.correo = "hazaellghfg@gmail.com";
+        // colores.push("rojo"); // Aqui se puede ver que agregue otro color al arreglo, pero
+
+
+        // console.log(objeto)
+        // console.log(colores)
+
+
+        // CADENAS DE TEXTO AKA STRINGS - OTRO VIDEO
+        // let nombre = "Hazael"
+        // let apellido = 'Flores'
+        // let saludo = new String ("Hola mundo");
+        // let lorem = "lorem ipsum dolor sit amet consectetur adipising elit"
+
+
+        // console.log(nombre, apellido, saludo)
+        // console.log(nombre.length, apellido, saludo, nombre.toUpperCase(), apellido.toLowerCase(),
+        // lorem.includes("amet"),
+        // lorem.includes("hazael"),
+        // lorem,
+        // // lorem.trim(),
+        // lorem.split(" ")
+        // )
+
+        // ESTA ES UNA CADENA DE TEXTO, CADA TIPO DE DATO TIENE SUS TIENE SUS PROPIAS PROPIEDADES Y SUS PROPIOS METODOS
+
+        // LAS PROPIEDADES SON CARACTERISTICAS ATRIBUTO
+        // LOS METODOS SON ACCIONES O FUNCIONES QUE ME VAN A PERMITIR EJECUTAR ALGO CON LA VARIABLE O EL TIPO DE DATO
+
+        // ----------------------------------------- OTRO VIDEO ----------------
+
+        // Template strings
+
+        let nombre = "Hazael"
+        let apellido = "Flores"
+
+        // //Concatenacion
+        // let saludo = "Hola mi nombre es: " + nombre + " " + apellido + ".";
+
+        // console.log(saludo)
+
+        // //Interpolacion de variables
+        // // template string
+
+        // let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`
+
+        // console.log(saludo2)
+
+        // let ul = "<ul> <li>Primavera</li> <li>Verano</li> <li>Otono</li> <li>Invierno</li></ul>"
+
+        // console.log(ul)
+
+        // let ul2 = `
+        //     <ul>
+        //     <li>Primavera</li>
+        //     <li>Verano</li>
+        //     <li>Otono</li>
+        //     <li>Invierno</li>
+        // </ul>`;
+
+
+        // console.log(ul2)
+
+        // --------------------------------------- OTRO VIDEO -----------------
+
+        // // NUMBERS
+        // let a = 2;
+        // let b = new Number(9)
+        // let c = 7.19
+        // let d = "5.6";
+
+        // console.log(typeof c, typeof d)
+
+        // console.log(a,b);
+        // console.log(c.toFixed(1));
+        // console.log(c.toFixed(5));
+        // console.log(parseInt(c));
+        // console.log(parseFloat(c));
+
+        // console.log(a + b);
+        // console.log(c + parseInt(d));
+        // console.log(c + parseFloat(d));
+
+        // console.log(c + Number.parseInt(d));
+        // console.log(c + Number.parseFloat(d));
+
+
+        // --------------------------------------- OTRO VIDEO -----------------
+
+        // VALORES BOOLEANOS
+
+        let verdadero = true;
+        let falso = false;
+        let v = Boolean(true)
+        let f = Boolean(false)
+
+
+        console.log(verdadero, falso, v, f)
+        console.log(typeof verdadero, typeof falso)
+
+        console.log(Boolean(0))
+        console.log(Boolean(-7))
+        console.log(Boolean(""))
+        console.log(Boolean("  "))
+
+        console.log(false && "dog")
+
+        
+
+
+
+
+
+        
+
+    </script>
+</body>
+</html>
