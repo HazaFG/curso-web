@@ -118,8 +118,8 @@
 
         // Template strings
 
-        let nombre = "Hazael"
-        let apellido = "Flores"
+        // let nombre = "Hazael"
+        // let apellido = "Flores"
 
         // //Concatenacion
         // let saludo = "Hola mi nombre es: " + nombre + " " + apellido + ".";
@@ -174,25 +174,110 @@
 
         // --------------------------------------- OTRO VIDEO -----------------
 
-        // VALORES BOOLEANOS
+        // // VALORES BOOLEANOS
 
-        let verdadero = true;
-        let falso = false;
-        let v = Boolean(true)
-        let f = Boolean(false)
+        // let verdadero = true;
+        // let falso = false;
+        // let v = Boolean(true)
+        // let f = Boolean(false)
 
 
-        console.log(verdadero, falso, v, f)
-        console.log(typeof verdadero, typeof falso)
+        // console.log(verdadero, falso, v, f)
+        // console.log(typeof verdadero, typeof falso)
 
-        console.log(Boolean(0))
-        console.log(Boolean(-7))
-        console.log(Boolean(""))
-        console.log(Boolean("  "))
+        // console.log(Boolean(0))
+        // console.log(Boolean(-7))
+        // console.log(Boolean(""))
+        // console.log(Boolean("  "))
 
-        console.log(false && "dog")
+        // console.log(false && "dog")
 
+        // --------------------------------------- OTRO VIDEO -----------------
+
+
+        // Null, nan y undefined
+
+        // van a representar un valor ausente, es decir, una variable que no tiene valor, pero la diferencia es que mientras undefined es una variable que no ha sido inicializada sin asignarle valor
+
+        // let indefinida;
+        // console.log(indefinida);
+
+        // //Esto seria un valor asignado intencionalmente por el programador, a diferencia de undefined es un valor asignado por js cuando una variable no tiene valor
+
+        // let nulo = null
+        // console.log(null)
+
+        // // NaN es not a number - nos va a dar un nan cuando alguno de los datos en cuestion no sea un numero
+
+        // let no_es_un_numero = 'Hola' * 3.7;
+        // console.log(no_es_un_numero)
+
+        // OTRO VIDEO ------------------------------------------------------------- HORA DE VER LOS TIPOS DE DATOS COMPUESTOS, ANTERIORMENTE VIMOS LOS TIPOS DE DATOS PRIMITIVOS
+
+        // Las funciones es un bloque de codigo autocontenido que se puede definir una sola vez y se pueden ejecutar en cualquier momento, puede o no recibir parametros, y puede devolver sea el caso o no algun valor.
+
+        // funciones declaradas
+
+        function estoEsUnaFuncion(){
+            console.log("uno")
+            console.log("dos")
+            console.log("tres")
+        }
         
+        //Una funcion puede recibir parametros
+        function unaFuncionQueDevuelveValor(){
+            console.log("uno")
+
+            return 19 // cuando una funcion detro del cuerpo de la misma funcion,el compolador del navegafor encuentra la palabra return, en ese momento ignora todas las linas de codigo que estan abajo, ejecuta todo lo que este antes del return
+
+            console.log("dos")
+            console.log("tres")
+            return "LA FUNCION HA RETORNADO UNA CADENA DE TEXTO"
+        }
+
+        // invocacion de funciones
+        // estoEsUnaFuncion();
+        // let valorDeFuncion = unaFuncionQueDevuelveValor();
+        // console.log(valorDeFuncion)
+
+
+        // FUNCION QUE RECIBE UN VALOR
+        function saludar(nombre = "desconocido", edad = 0){
+            console.log(`HOla mi nombre es ${nombre}, y tengo ${edad} años`);
+        }
+
+        // AQUI LE ENTREGAMOS ESTOS VALORES A LA FUNCTION
+        // saludar("kenobi", 14)
+        // saludar(); //undefined jajajj
+
+        // La invoque incluso antes de declararla
+        funcionDeclarada();
+
+        //funciones declaradas vs funciones expresadas
+        function funcionDeclarada(){
+            console.log("esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada")
+        }
+
+        funcionDeclarada();
+
+        //vamos a asignarle una funcion a una variable
+
+        //a las funciones expresadas se les suele asignar const
+
+        // funcionExpresada();
+
+        //Funcion anonima(ya que no tiene nombre)
+        const funcionExpresada = function(){
+            console.log("esto es una funcion expresada, es decir, una funcion que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion javascript nos dira 'Cannot access 'funcionExpresada' before initialization'")
+        }
+
+
+        funcionExpresada();
+
+
+
+
+
 
 
 
