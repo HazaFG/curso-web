@@ -218,22 +218,22 @@
 
         // funciones declaradas
 
-        function estoEsUnaFuncion(){
-            console.log("uno")
-            console.log("dos")
-            console.log("tres")
-        }
+        // function estoEsUnaFuncion(){
+        //     console.log("uno")
+        //     console.log("dos")
+        //     console.log("tres")
+        // }
         
-        //Una funcion puede recibir parametros
-        function unaFuncionQueDevuelveValor(){
-            console.log("uno")
+        // //Una funcion puede recibir parametros
+        // function unaFuncionQueDevuelveValor(){
+        //     console.log("uno")
 
-            return 19 // cuando una funcion detro del cuerpo de la misma funcion,el compolador del navegafor encuentra la palabra return, en ese momento ignora todas las linas de codigo que estan abajo, ejecuta todo lo que este antes del return
+        //     return 19 // cuando una funcion detro del cuerpo de la misma funcion,el compolador del navegafor encuentra la palabra return, en ese momento ignora todas las linas de codigo que estan abajo, ejecuta todo lo que este antes del return
 
-            console.log("dos")
-            console.log("tres")
-            return "LA FUNCION HA RETORNADO UNA CADENA DE TEXTO"
-        }
+        //     console.log("dos")
+        //     console.log("tres")
+        //     return "LA FUNCION HA RETORNADO UNA CADENA DE TEXTO"
+        // }
 
         // invocacion de funciones
         // estoEsUnaFuncion();
@@ -241,38 +241,88 @@
         // console.log(valorDeFuncion)
 
 
-        // FUNCION QUE RECIBE UN VALOR
-        function saludar(nombre = "desconocido", edad = 0){
-            console.log(`HOla mi nombre es ${nombre}, y tengo ${edad} años`);
-        }
+        // // FUNCION QUE RECIBE UN VALOR
+        // function saludar(nombre = "desconocido", edad = 0){
+        //     console.log(`HOla mi nombre es ${nombre}, y tengo ${edad} años`);
+        // }
 
-        // AQUI LE ENTREGAMOS ESTOS VALORES A LA FUNCTION
-        // saludar("kenobi", 14)
-        // saludar(); //undefined jajajj
+        // // AQUI LE ENTREGAMOS ESTOS VALORES A LA FUNCTION
+        // // saludar("kenobi", 14)
+        // // saludar(); //undefined jajajj
 
-        // La invoque incluso antes de declararla
-        funcionDeclarada();
+        // // La invoque incluso antes de declararla
+        // funcionDeclarada();
 
-        //funciones declaradas vs funciones expresadas
-        function funcionDeclarada(){
-            console.log("esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada")
-        }
+        // //funciones declaradas vs funciones expresadas
+        // function funcionDeclarada(){
+        //     console.log("esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada")
+        // }
 
-        funcionDeclarada();
+        // funcionDeclarada();
 
-        //vamos a asignarle una funcion a una variable
+        // //vamos a asignarle una funcion a una variable
 
-        //a las funciones expresadas se les suele asignar const
+        // //a las funciones expresadas se les suele asignar const
+
+        // // funcionExpresada();
+
+        // //Funcion anonima(ya que no tiene nombre)
+        // const funcionExpresada = function(){
+        //     console.log("esto es una funcion expresada, es decir, una funcion que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion javascript nos dira 'Cannot access 'funcionExpresada' before initialization'")
+        // }
+
 
         // funcionExpresada();
 
-        //Funcion anonima(ya que no tiene nombre)
-        const funcionExpresada = function(){
-            console.log("esto es una funcion expresada, es decir, una funcion que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion javascript nos dira 'Cannot access 'funcionExpresada' before initialization'")
-        }
+        // OTRO VIDEO --------------------------------------------------------------
+
+        // Hora de ver arreglos
+
+        const a = [];
+        // Un arreglo puede ser una coleccion de elementos de diferente tipo
+        const b = [1, true, "hola", ["A", "B", "C", [1,2,3]]];
 
 
-        funcionExpresada();
+        console.log(b)
+        console.log(b.length)
+
+        // con esto accedemos directamente al elemento numero 2 que esta en el arreglo, que en este caso seria el "hola"
+        console.log(b[2])
+        console.log(b[0])
+
+        console.log(b[3])
+
+        // con esto accedemos a los valores que estan dentro del arreglo que esta dentro del arreglo de b, que en este caso seria la C
+        console.log(b[3][2])
+
+        //Esto accede aun mas y nos muestra el numero 1 perteneciente al tercer arreglo dentro del arreglo
+        console.log(b[3][3][0])
+
+
+        // otra forma de crear arreglos
+        const c = Array.of("x", "y", "z", 9,8,7)
+        console.log(c)
+
+
+        const d = Array(100).fill(false)
+        console.log(d)
+
+
+        const colores = ["rojo", "verde", "azul"]
+        colores.push("negro")
+
+        console.log(colores)
+
+        // Quita el ultimo elemento
+        colores.pop()
+        console.log(colores)
+
+        colores.forEach(function(el, indice){
+            console.log(`<li id = "${indice}">${el}<li>`)
+        })
+
+
+
 
 
 
