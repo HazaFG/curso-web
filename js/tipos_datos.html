@@ -278,63 +278,127 @@
 
         // Hora de ver arreglos
 
-        const a = [];
-        // Un arreglo puede ser una coleccion de elementos de diferente tipo
-        const b = [1, true, "hola", ["A", "B", "C", [1,2,3]]];
+        // const a = [];
+        // // Un arreglo puede ser una coleccion de elementos de diferente tipo
+        // const b = [1, true, "hola", ["A", "B", "C", [1,2,3]]];
 
+
+        // console.log(b)
+        // console.log(b.length)
+
+        // // con esto accedemos directamente al elemento numero 2 que esta en el arreglo, que en este caso seria el "hola"
+        // console.log(b[2])
+        // console.log(b[0])
+
+        // console.log(b[3])
+
+        // // con esto accedemos a los valores que estan dentro del arreglo que esta dentro del arreglo de b, que en este caso seria la C
+        // console.log(b[3][2])
+
+        // //Esto accede aun mas y nos muestra el numero 1 perteneciente al tercer arreglo dentro del arreglo
+        // console.log(b[3][3][0])
+
+
+        // // otra forma de crear arreglos
+        // const c = Array.of("x", "y", "z", 9,8,7)
+        // console.log(c)
+
+
+        // const d = Array(100).fill(false)
+        // console.log(d)
+
+
+        // const colores = ["rojo", "verde", "azul"]
+        // colores.push("negro")
+
+        // console.log(colores)
+
+        // // Quita el ultimo elemento
+        // colores.pop()
+        // console.log(colores)
+
+        // colores.forEach(function(el, indice){
+        //     console.log(`<li id = "${indice}">${el}<li>`)
+        // })
+
+        // OTRO VIDEO -----------------------------------------------------------
+
+        // OBJETOS
+
+        let a = new String("hola")
+        // console.log(a)
+
+        // es importante definir como const los objetos
+        const b = {
+
+        }
 
         console.log(b)
-        console.log(b.length)
 
-        // con esto accedemos directamente al elemento numero 2 que esta en el arreglo, que en este caso seria el "hola"
-        console.log(b[2])
-        console.log(b[0])
-
-        console.log(b[3])
-
-        // con esto accedemos a los valores que estan dentro del arreglo que esta dentro del arreglo de b, que en este caso seria la C
-        console.log(b[3][2])
-
-        //Esto accede aun mas y nos muestra el numero 1 perteneciente al tercer arreglo dentro del arreglo
-        console.log(b[3][3][0])
-
-
-        // otra forma de crear arreglos
-        const c = Array.of("x", "y", "z", 9,8,7)
+        const c = new Object();
         console.log(c)
 
-
-        const d = Array(100).fill(false)
-        console.log(d)
+        // LOS OBJETOS DENTRO DE UN OBJETO A LAS VARIABLES SE LES VAN A LLAMAR ATRIBUTOS/PROPIEDADES, Y A LAS FUNCIONES SE LES LLAMA METODOS
 
 
-        const colores = ["rojo", "verde", "azul"]
-        colores.push("negro")
+        // EN EL OBJETO ARRAY(), EL forEach es una funcion dentro del objeto array, tal como lo es ahorita mi funcion saludar dentro de mi objeto haza, y el .lenght vendria siendo una variable del objeto array tal como lo es en este momento mi nombre o apellido dentro de mi objeto haza y se le llama atributo o propiedad
 
-        console.log(colores)
+        // TODOS LOS QUE SEAN FUNCIONES VAN A NECESITAR PARENTESIS PORQUE SON FUNCIONES SON FUNCIONEEEES Y VAN A OCUPAR PARENTESIS JEJE
 
-        // Quita el ultimo elemento
-        colores.pop()
-        console.log(colores)
+        const haza = {
+            nombre: "Hazael",
+            apellido: "Flores",
+            edad:20,
+            pasatiempos:["Correr", "Hacer ejercicio", "Dar clases"],
+            soltero:false,
+            contacto: {
+                email: "hazaelfg",
+                twitter: "hazapro",
+                movil: "525353434"
+            },
 
-        colores.forEach(function(el, indice){
-            console.log(`<li id = "${indice}">${el}<li>`)
-        })
+            saludar: function(){
+                console.log(`HOla :)`)
+            },
 
+            decirNombre: function(){
+                // Siempre que querramos a acceder a un atributo dentro del objeto podemos usar this en javascript
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años, y me puedes seguir en Twitter como '${this.contacto.twitter}'`)
+            }
+        }
 
+        console.log(haza)
+        console.log(haza["nombre"])
+        console.log(haza["apellido"])
 
+        // LOS ATRIBUTOS NO SON MAS QUE VARIABLES QUE TIENE DENTRO UN OBJETO
+        console.log(haza.nombre)
+        console.log(haza.apellido)
+        console.log(haza.soltero)
+        console.log(haza.pasatiempos)
 
+        // Hacer ejercicio
+        console.log(haza.pasatiempos[1])
 
+        // Acceder con objeto
+        console.log(haza.contacto)
+        console.log(haza.contacto.twitter)
 
+        //Ejecutar funcion (con parentesis porque es funcion)
+        haza.saludar()
+        haza.decirNombre()
 
+        // lista todo lo que tiene dentro el objeto
+        console.log(Object.keys(haza))
 
+        // muestra los valores que tiene ese objeto
+        console.log(Object.values(haza))
 
+        // permite saber si tiene una propiedad existente en un objeto, en este caso seria el nombre, devolvera un booleano
+        console.log(haza.hasOwnProperty("nombre"))
 
-
-
-
-        
-
+        // false
+        console.log(haza.hasOwnProperty("nacimiento"))
     </script>
 </body>
 </html>
