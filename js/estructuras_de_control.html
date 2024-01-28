@@ -229,44 +229,292 @@
         //     console.log("for " + i)
         // }
 
-        let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+        // let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 
-        for(let i = 0; i < numeros.length; i++){
-            console.log(numeros[i])
-        }        
+        // for(let i = 0; i < numeros.length; i++){
+        //     console.log(numeros[i])
+        // }        
 
-        //for in
+        // //for in
 
-        //va a permitir recorrer las propiedades de un objeto, es un for especial para un objeto
+        // //va a permitir recorrer las propiedades de un objeto, es un for especial para un objeto
 
 
-        const haza = {
-            nombre: "Haza",
-            apellido: "FG",
-            edad: 20
+        // const haza = {
+        //     nombre: "Haza",
+        //     apellido: "FG",
+        //     edad: 20
+        // }
+
+
+        // for (const propiedad in haza) {
+        //                                             //al parecer aqui puedo acceder
+        //                                             //al valor del objeto con un corchete "Haza", "FG", "20"
+        //     console.log(`Key: ${propiedad}, Value: ${haza[propiedad]}`)
+        // }
+
+
+        // // forin solo permite recorrer propiedades de un objeto mientras que forof me va a permitir recorrer todos los elementos de cualquier elemento que sea iterable en js
+        // for (const elemento of numeros) {
+        //     console.log(elemento)
+        // }
+
+        // //forof con una cadena de texto, iteraremos cada uno de los caracteres de la cadena de texto
+
+
+        // let cadena = "Hola mundo"
+
+        // for (const caracter of cadena) {
+        //     console.log(caracter)
+        // }
+
+        // OTRO VIDEO --------------------------------------------- MANEJO DE ERRORES
+
+        // try {
+        //     console.log("en el try se agrega el codigo a evaluar");
+        //     noexiste; //esto va a dar error
+        //     console.log("Segundo mensaje en el try")
+        // } catch (error) {
+        //     console.log("Catch, captura cualquier error surgido o lanzado en el try")
+
+        //     console.log(error)//mandamos llamar el error jeje
+            
+        // }finally{
+        //     console.log("El bloque finally se ejecutara siempre al final de un bloque try catch")
+        // }
+
+
+        // try{
+        //     let numero = "y"
+        //     if(isNaN(numero)){
+        //         throw new Error("El caracter introducido no es un Numero")
+        //     }
+        //     console.log(numero * numero)
+
+        // }catch(error){
+        //     console.log(`Se produjo el siguiente error${error}`)
+        // }finally{
+        //     console.log("Esto no se pa que sirve")
+        // }
+
+        // OTRO VIDEO ---------------------------------------------------------
+
+        // Break y continue
+
+        // const numeros = [1,2,3,4,5,6,7,8,9,0];
+
+        // for(let i = 0; i < numeros.length; i ++){
+        //     if(i === 5){
+        //         break;
+        //     }
+        //     console.log(numeros[i]);
+        // }
+
+        // for(let i = 0; i < numeros.length; i ++){
+        //     if(i === 5){
+        //         continue;
+        //     }
+        //     console.log(numeros[i]);
+        // }
+
+        // const numeros = [1,2,3];
+
+        // // Esto es sin usar la destructuracion, lo cual es tedioso, ya que lo que queremos es asignar los numeros del arreglo a una variable diferente
+        // let uno = numeros [0], 
+        // dos = numeros[1], 
+        // tres = numeros [2]
+
+        // // Con destructuracion
+        // const [one, two, three] = numeros;
+        
+        // console.log(uno, dos, tres);
+        // console.log(one, two, three);
+
+
+        // // sirve para objetos tambien
+
+        // const persona = {
+        //     nombre: "Hazael",
+        //     apellido: "FG",
+        //     edad: 20
+        // }
+
+        // // destructuracion, las variables tienen que llamarse igual que en el objeto, es muy importante
+        // let {nombre, apellido, edad} = persona;
+
+        // console.log(persona)
+        // console.log(nombre, apellido, edad)
+
+
+        // OTRO VIDEOOO ------------------------------------------------------
+
+        // OBJETOS LITERALES
+
+        // let nombre = "Kenobi"
+        // let edad = 9
+
+        // const perro = {
+        //     nombre: nombre,
+        //     edad: edad,
+        //     ladrar: function(){
+        //         console.log("RWAR")
+        //     }
+        // }
+
+        // console.log(perro)
+        // perro.ladrar()
+
+
+        // const dog = {
+        //     nombre,
+        //     edad,
+        //     raza: "callejero",
+        //     ladrar:function(){
+        //         console.log("RWAR RWAR")
+        //     }
+        // }
+
+        // console.log(dog)
+        // dog.ladrar();
+
+
+        // OTRO VIDEOOOOOOOOOOOOOOOOOO ------------------------------------------
+
+        // PARAMETROS REST Y OPERADOR SPREAD
+
+        // son una forma de ir agregando virtualmente ir agreagando parametros infinitos a una funcion o dentro de una variable, un arreglo por ejemplo pero que no sabes cuantos valores vas a tener
+
+        
+        // function sumar(a,b, ...c){
+        //     let resultado = a + b;
+            
+        //     c.forEach(function (n){
+        //         resultado += n
+        //     });
+            
+        //     return resultado;
+            
+        // }
+        
+        // console.log(sumar(1,2,5,6))
+        // console.log(sumar(1,2,5,6,7))
+
+
+        // // Spread
+
+        // const array1 = [1,2,3,4,5],
+        // array2 = [6,7,8,9,0]
+
+        // console.log(array1, array2)
+
+        // const array3 = [...array1, ...array2]
+        // console.log(array3)
+
+
+        // OTRO VIDEOOOOOOOOOOO --------------------------------------------------
+
+        // Arrow functions
+
+        // Es una nueva forma de definir las funciones anonimas
+
+        // Funcion expresada se genera cuando a una variable le asignas el valor de una funcion anonima
+        // const saludar = function(){
+        //     console.log(`hola`)
+        // }
+
+        // saludar()
+
+
+        // ejemplo arrow function
+
+        // DATO: SI SOLO TIENES UNA LINEA DE CODIGO EN LA FUNCION PUEDES OMITIR LAS LLAVES JEJE
+
+        // const saludar = () => console.log(`Hola`)
+        // saludar()
+
+        const saludar = nombre => console.log(`Hola ${nombre}`)
+        saludar("Hazael")  
+
+        // antes
+        // const sumar = function(a,b){
+        //     return a + b
+        // }
+                            //Aqui tenemos un return implicito
+        const sumar = (a,b) => a+b;
+
+        console.log(sumar(9, 9))
+
+
+        // AQUI TENGO VARIAS LINEAS DE CODIGO ENTONCES NO TENGO RETURN IMPLICITO Y SI TENGO QUE USAR LAS LLAVES
+        const funcionDeVariasLineas = () => {
+            console.log("UNO")
+            console.log("DOS")
+            console.log("TRES")
         }
 
+        funcionDeVariasLineas();
 
-        for (const propiedad in haza) {
-                                                    //al parecer aqui puedo acceder
-                                                    //al valor del objeto con un corchete "Haza", "FG", "20"
-            console.log(`Key: ${propiedad}, Value: ${haza[propiedad]}`)
+
+        const numeros = [1,2,3,4,5]
+
+        numeros.forEach(function(elemento, index){
+            console.log(`El elemento ${elemento} esta en la posicion ${index}`)
+        })
+
+        console.log("espacio perron")
+        
+        // Vamos a transformarlo a una arrow function
+        numeros.forEach((elemento, index)=>{
+            console.log(`${elemento} esta en la posicion ${index}`)
+        })
+        
+        console.log("espacio perron")
+
+        // Vamos a omitirle las llaves ya que solo tenemos una sola linea de codigo 
+        numeros.forEach((elemento, index) => console.log(`${elemento} esta en la posicion ${index}`))
+
+        // LAS ARROW FUNCTIONS CAPTURAN EL OBJETO THIS DEL CONTEXTO EN EL QUE SE ENCUENTREN
+
+        // function Perro (){
+        //     console.log(this)
+        // }
+
+        // Perro()
+
+        // IMAGINA QUE EN LUGAR DE UNA FUNCION YO TENGO UN OBJETO
+        const perroo = {
+            nombre: "kenobi",
+            ladrar(){
+                console.log(this)
+            }
         }
 
-
-        // forin solo permite recorrer propiedades de un objeto mientras que forof me va a permitir recorrer todos los elementos de cualquier elemento que sea iterable en js
-        for (const elemento of numeros) {
-            console.log(elemento)
+        // TIENES  QUE TENER CUIDADO YA QUE LA ARROW FUNCTION SE PODRIA DECIR QUE HACE GLOBAL A TU FUNCION, ES DECIR, TU METODO LADRAR LO HACE PARTE DE TODA LA WEB, MIENTRAS QUE LA FUNCION NORMAL, RESPETA EL CONTEXTO EN EL QUE TE ENCUENTRAS
+        const perro = {
+            nombre: "kenobi",
+            ladrar:() => {
+                console.log(this)
+            }
         }
 
-        //forof con una cadena de texto, iteraremos cada uno de los caracteres de la cadena de texto
+        perro.ladrar();
+        perroo.ladrar();
 
 
-        let cadena = "Hola mundo"
 
-        for (const caracter of cadena) {
-            console.log(caracter)
-        }
+
+        // cuando la funcion es declarada puedo incluso invocar primero la funcion y luego escribirla, lo vimos en el video de funciones acuerdate
+
+        // // esto seria una funcion declarada
+        // function saludar(){
+        //     console.log(`hola`)
+        // }
+
+        // saludar();
+
+
+
+
 
 
         
