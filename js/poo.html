@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programacion orientada a objetos</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+
+
+    <script>
+
+        // Prototipos
+
+
+        /*
+        POO
+
+        Clases - Modelo a seguir, esta es la idea de la que habla platon
+        Objetos - Es una instancia de una clase, es la copia de la idea, es el que ya esta en el mundo real
+            atributos - Caracteristica o propiedad del objeto (son las variables dentro del objeto)
+            Metodos - son las acciones que un objeto puede realizar, como Error, log, etc, (son funciones dentro de un objeto)
+
+
+            JAVASCRIPT ES UN LENGUAJE DE PROGRAMACION ORIENTADO A OBJETOS PERO BASADO EN PROTOTIPOS, NO EN CLASES, CUANDO ESCRIBIMOS UNA CLASE EN JAVASCRIPT, EL INTERPRETE SOLO TRANSFORMA ESA CLASE A UNA FUNCION PROTOTIPAL
+
+
+            QUE ES UN PROTOTIPO?
+            - ES UN MECANISMO POR EL CUAL UN OBJETO PUEDE HEREDAR DE UN OBJETO PADRE CARACTERISTICAS (ATRUBUTOS, METODOS, FUNCIONES)
+
+        */
+
+
+        // // un objeto animal, ESTO SE VE DESPUES PERO ES UN OBJETO LITERAL, SU PROTOTIPO ES OBJECT, SU PROTOTIPO ES OBJEEEECT
+        // const animal = {
+        //     nombre: "martingato",
+        //     sonar(){
+        //         console.log("hago sonidos porque estoy vivo");
+        //     }
+        // }
+
+        // // Lola bunny
+        // const animal2 = {
+        //     nombre: "Lola Bunny",
+        //     sonar(){
+        //         console.log("hago sonidos porque estoy vivo");
+        //     }
+        // }
+
+        // console.log(animal)
+        // console.log(animal2)
+
+
+        // Ya sabes que para definir una CLASE se utiliza UperCamelCase, es decir, empiezas con mayuscula
+
+        // Y para un objeto se utiliza lowerCamelCase
+
+
+        //Funcion constructora de la cual vamos a crear un prototipo(VERSION UNO JEJEJEJE VERSION UNOOOOOOOOOOOOOOO)
+
+        // VERSION 1 DE LA FUNCION CONSTRUCTORA --------------------
+
+        // function Animal (nombre, genero){
+        //     //Atributos
+        //     this.nombre = nombre;
+        //     this.genero = genero;
+
+        //     //Metodos
+        //     this.sonar = function(){
+        //         console.log("hago sonidos porque estoy vivo")
+        //     }
+
+        //     this.saludar = function(){
+        //         console.log(`Hola, me llamo ${this.nombre}`)
+        //     }
+
+        // }
+
+
+        // //FUNCION CONSTRUCTORA DONDE ASIGNAMOS LOS METODOS AL PROTOTIPO, NO A LA FUNCION COMO TAL
+        // function Animal (nombre, genero){
+        //     //Atributos
+        //     this.nombre = nombre;
+        //     this.genero = genero;
+        // }
+
+        // //METODOS AGREGADOS AL PROTOTIPO DE LA FUNCION CONSTRUCTORA
+        // Animal.prototype.sonar = function(){
+        //     console.log("hago sonidos porque estoy vivo")
+        // }
+
+        // Animal.prototype.saludar = function(){
+        //     console.log(`Hola, me llamo ${this.nombre}`)
+        // }
+        
+        // const snoopy = new Animal("Snoopy", "Macho")
+        // const lolaBunny = new Animal("LolaBunny", "Hembra")
+
+
+        // console.log(snoopy);
+        // console.log(lolaBunny);
+
+
+        // snoopy.sonar()
+        // snoopy.saludar()
+
+        // lolaBunny.sonar();
+        // lolaBunny.saludar();
+
+
+
+        // OTRO VIDEOOOO ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        // // HERENCIA PROTOTIPICA
+
+
+        //  //FUNCION CONSTRUCTORA DONDE ASIGNAMOS LOS METODOS AL PROTOTIPO, NO A LA FUNCION COMO TAL
+        // function Animal (nombre, genero){
+        //     //Atributos
+        //     this.nombre = nombre;
+        //     this.genero = genero;
+        // }
+
+        // //METODOS AGREGADOS AL PROTOTIPO DE LA FUNCION CONSTRUCTORA
+        // Animal.prototype.sonar = function(){
+        //     console.log("hago sonidos porque estoy vivo")
+        // }
+
+        // Animal.prototype.saludar = function(){
+        //     console.log(`Hola, me llamo ${this.nombre}`)
+        // }
+
+        // // Herencia prototipica
+        // function Perro(nombre, genero, tamanio){
+        //     this.super = Animal;
+        //     this.super(nombre, genero);
+        //     this.tamanio = tamanio;
+        // }
+
+        // //Perro esta heredando de Animal, no seria object su padre, bueno si, pero seria primero de animal
+        // Perro.prototype = new Animal();
+        // Perro.prototype.constructor = Perro;
+
+        // // sobreescritura de metodos del Prototipo padre en el hijo
+        // Perro.prototype.sonar = function(){
+        //     console.log("soy un perro y mi sonido es un ladrido")
+        // }
+
+        // // creando un metodo ladrar el cual no es parte de la clase padre, pero podemos crear uno
+        // Perro.prototype.ladrar = function (){
+        //     console.log("RWAR RWAR")
+        // }
+
+        // // Pruebas de toda esta mierda, primero snoopy era un Animal, pero ahora sera un perro
+        // // const snoopy = new Animal("Snoopy", "Macho")
+        // const snoopy = new Perro("Snoopy", "Macho", "Mediano")
+
+        // // const perro = new Perro("Kenobi", "Macho", "Chiquito");
+        // // console.log(perro)
+        
+        // const lolaBunny = new Animal("LolaBunny", "Hembra")
+
+
+        // console.log(snoopy);
+        // console.log(lolaBunny);
+
+
+        // snoopy.sonar()
+        // snoopy.saludar()
+        // snoopy.ladrar()
+
+        // lolaBunny.sonar();
+        // lolaBunny.saludar();
+        // // lolaBunny.ladrar()
+
+
+        // OTRO VIDEOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        // CLASES Y HERENCIA
+
+
+        //Las clases no reciben parametros, las clases tienen un metodo especial que se llama constructor
+
+        // class Animal{
+        //     // el constructor de la clase es un metodo especial que se ejecuta en el momento de instanciar la clase
+        //     constructor(nombre, genero){
+        //         this.nombre = nombre;
+        //         this.genero = genero;
+        //     }
+            
+        //     //Metodos
+        //     sonar(){
+        //         console.log("Hago sonidos porque estoy vivo")
+        //     }
+
+        //     saludar(){
+        //         console.log(`Hola, me llamo ${this.nombre}`)
+        //     }
+        // }
+
+        // class Perro extends Animal{
+        //     constructor(nombre, genero, tamanio){
+        //         //Con el metodo super(), se manda a llamar el constructor de la clase padre
+        //         super(nombre, genero);
+        //         this.tamanio = tamanio;
+        //     }
+
+        //     sonar(){
+        //         console.log("soy un perro y mi sonido es un ladrido")
+        //     }
+
+        //     ladrar(){
+        //         console.log("RWAR RWAR RWAR")
+        //     }
+        // }
+
+        // const yeya = new Animal("Yeya", "Hembra")
+        // const kenobi = new Perro("kenobi", "Macho dudoso", "Perro chiquito")
+
+        // console.log(yeya)
+        // yeya.saludar()
+        // yeya.sonar()
+
+        // console.log(kenobi)
+        // kenobi.saludar()
+        // kenobi.sonar()
+        // kenobi.ladrar()
+
+
+        // OTRO VIDEOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Metodos estaticos, getters y setters
+
+        class Animal{
+            // el constructor de la clase es un metodo especial que se ejecuta en el momento de instanciar la clase
+            constructor(nombre, genero){
+                this.nombre = nombre;
+                this.genero = genero;
+            }
+            
+            //Metodos, no existe protected, o private, todo es public, ya que las clases solo son azucar de sintaxis
+            sonar(){
+                console.log("Hago sonidos porque estoy vivo")
+            }
+
+            saludar(){
+                console.log(`Hola, me llamo ${this.nombre}`)
+            }
+
+        }
+
+        class Perro extends Animal{
+            constructor(nombre, genero, tamanio){
+                //Con el metodo super(), se manda a llamar el constructor de la clase padre
+                super(nombre, genero);
+                this.tamanio = tamanio;
+                this.raza = null;
+            }
+
+            sonar(){
+                console.log("soy un perro y mi sonido es un ladrido")
+            }
+
+            ladrar(){
+                console.log("RWAR RWAR RWAR")
+            }
+
+            //un metodo estatico que se puede ejecutar sin necesidad de instanciar la clase. En este caso seria sin haber creado un objeto del tipo Perro
+            static queEres(numero){
+                
+                console.log("Los perros somos animales mamiferos que pertenecemos a la familia de los caninos. Somos considerados los mejores amigos del hombre.")
+
+                numero = numero * 2
+                console.log(numero)
+            }
+
+            // LOS GETTERS Y SETTERS SON METODOS ESPECIALES QUE NOS PERMITEN ESTABLECER Y OBTENER LOS VALORES DE ATRIBUTOS DE NUESTRA CLASE
+
+            get getRaza(){
+                return this.raza;
+            }
+
+            set setRaza(raza){
+                this.raza = raza;
+            }
+        }
+
+        // kenobi.sonar()
+        let numero = 5
+        Perro.queEres(numero)  
+
+        const yeya = new Animal("Yeya", "Hembra")
+        const kenobi = new Perro("kenobi", "Macho dudoso", "Perro chiquito")
+
+        console.log(yeya)
+        yeya.saludar()
+        yeya.sonar()
+
+        console.log(kenobi)
+        kenobi.saludar()
+        kenobi.sonar()
+        kenobi.ladrar()
+
+        
+        console.log(kenobi.getRaza)
+        kenobi.setRaza = "Maltez";
+        console.log(kenobi.getRaza)
+
+
+
+    </script>
+    
+</body>
+</html>
