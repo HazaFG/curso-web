@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos y funciones del lenguaje</title>
+
+
+
+</head>
+<body>
+    <script>
+
+        console.log(console)
+        console.error("Esto es un error");
+        console.warn("Esto es una advertencia");
+        console.info("Esto es un bloque de informacion")
+        console.log("Esto es un registro de lo que ha pasado en nuestra aplicacion")
+
+        let nombre = "Hazael", edad = 20, apellido = "Flores";
+
+        console.log(nombre)
+        console.log(apellido)
+        console.log(edad)
+
+        console.log(`Hola, mi nombre es ${nombre}, y mi apellido es ${apellido} y tengo ${edad} anos`)
+
+        // %s siginifica que va a recibir una cadena de texto
+        // %d significa digito
+        console.log(`Hola, mi nombre es %s %s y tengo %d anos`, nombre, apellido, edad)
+
+        console.clear()
+
+        console.log(window)
+        console.log(document)
+
+        // ESTO NOS AYUDA A DEJAR DE VER EL DOCUMENTO COMO ALGO QUE SE PAREZCA A HTML, SINO COMO ALGO DE JAVASCRIPT
+        console.dir(window)
+        console.dir(document)
+
+        console.clear()
+
+    </script>
+    
+</body>
+</html>
