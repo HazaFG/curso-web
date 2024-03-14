@@ -40,6 +40,69 @@
 
         console.clear()
 
+        console.group("Canal de youtube de Hazael Flores Gastelum")
+        console.log("Curso de Javascript")
+        console.log("Curso de Laravel")
+        console.log("Curso de PWA")
+        console.log("Curso de dise;o y programacion web")
+        console.groupEnd()
+
+
+        console.groupCollapsed("Canal de youtube de Hazael Flores Gastelum")
+        console.log("Curso de Javascript")
+        console.log("Curso de Laravel")
+        console.log("Curso de PWA")
+        console.log("Curso de dise;o y programacion web")
+        console.groupEnd()
+
+        //VAmos a crear tablitas
+
+        console.log(console)
+        console.table(Object.entries(console).sort())  
+
+        const numeros = [1,2,3,4,5], vocales = ["a","b","c","d","e"];
+
+        console.table(numeros)
+        console.table(vocales)
+
+        const perro = {
+            nombre: "Kenobi",
+            edad: "14",
+            color: "Blanco con tierra"
+        }
+
+        console.table(perro)
+        console.clear()
+
+        console.time("Cuanto tarda en cargar esta fregadera")
+
+        const arreglo = Array(1000000)
+
+        for (let i = 0; i<arreglo.length; i++){
+            arreglo[i];
+        }
+
+        console.timeEnd("Cuanto tarda en cargar esta fregadera");
+
+        // console.log(arreglo)
+
+        console.clear()
+
+        for (let i = 0; i<=100; i++){
+            console.count("Codigo For")
+            console.log[i];
+        }
+
+        console.clear()
+
+        let x = 3;
+        let y = 2;
+
+        pruebaXY = "Se espera que x siempre sea menor que y"
+
+        console.assert(x<y, {x,y,pruebaXY})
+
+
     </script>
     
 </body>
