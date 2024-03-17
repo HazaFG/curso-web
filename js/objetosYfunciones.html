@@ -11,96 +11,162 @@
 <body>
     <script>
 
-        console.log(console)
-        console.error("Esto es un error");
-        console.warn("Esto es una advertencia");
-        console.info("Esto es un bloque de informacion")
-        console.log("Esto es un registro de lo que ha pasado en nuestra aplicacion")
 
-        let nombre = "Hazael", edad = 20, apellido = "Flores";
+        // VIDEO 26 OBJETO CONSOLE -------------------------------------------------------------------------------------------------------
 
-        console.log(nombre)
-        console.log(apellido)
-        console.log(edad)
+        // console.log(console)
+        // console.error("Esto es un error");
+        // console.warn("Esto es una advertencia");
+        // console.info("Esto es un bloque de informacion")
+        // console.log("Esto es un registro de lo que ha pasado en nuestra aplicacion")
 
-        console.log(`Hola, mi nombre es ${nombre}, y mi apellido es ${apellido} y tengo ${edad} anos`)
+        // let nombre = "Hazael", edad = 20, apellido = "Flores";
 
-        // %s siginifica que va a recibir una cadena de texto
-        // %d significa digito
-        console.log(`Hola, mi nombre es %s %s y tengo %d anos`, nombre, apellido, edad)
+        // console.log(nombre)
+        // console.log(apellido)
+        // console.log(edad)
 
-        console.clear()
+        // console.log(`Hola, mi nombre es ${nombre}, y mi apellido es ${apellido} y tengo ${edad} anos`)
 
-        console.log(window)
-        console.log(document)
+        // // %s siginifica que va a recibir una cadena de texto
+        // // %d significa digito
+        // console.log(`Hola, mi nombre es %s %s y tengo %d anos`, nombre, apellido, edad)
 
-        // ESTO NOS AYUDA A DEJAR DE VER EL DOCUMENTO COMO ALGO QUE SE PAREZCA A HTML, SINO COMO ALGO DE JAVASCRIPT
-        console.dir(window)
-        console.dir(document)
+        // console.clear()
 
-        console.clear()
+        // console.log(window)
+        // console.log(document)
 
-        console.group("Canal de youtube de Hazael Flores Gastelum")
-        console.log("Curso de Javascript")
-        console.log("Curso de Laravel")
-        console.log("Curso de PWA")
-        console.log("Curso de dise;o y programacion web")
-        console.groupEnd()
+        // // ESTO NOS AYUDA A DEJAR DE VER EL DOCUMENTO COMO ALGO QUE SE PAREZCA A HTML, SINO COMO ALGO DE JAVASCRIPT
+        // console.dir(window)
+        // console.dir(document)
+
+        // console.clear()
+
+        // console.group("Canal de youtube de Hazael Flores Gastelum")
+        // console.log("Curso de Javascript")
+        // console.log("Curso de Laravel")
+        // console.log("Curso de PWA")
+        // console.log("Curso de dise;o y programacion web")
+        // console.groupEnd()
 
 
-        console.groupCollapsed("Canal de youtube de Hazael Flores Gastelum")
-        console.log("Curso de Javascript")
-        console.log("Curso de Laravel")
-        console.log("Curso de PWA")
-        console.log("Curso de dise;o y programacion web")
-        console.groupEnd()
+        // console.groupCollapsed("Canal de youtube de Hazael Flores Gastelum")
+        // console.log("Curso de Javascript")
+        // console.log("Curso de Laravel")
+        // console.log("Curso de PWA")
+        // console.log("Curso de dise;o y programacion web")
+        // console.groupEnd()
 
-        //VAmos a crear tablitas
+        // //VAmos a crear tablitas
 
-        console.log(console)
-        console.table(Object.entries(console).sort())  
+        // console.log(console)
+        // console.table(Object.entries(console).sort())  
 
-        const numeros = [1,2,3,4,5], vocales = ["a","b","c","d","e"];
+        // const numeros = [1,2,3,4,5], vocales = ["a","b","c","d","e"];
 
-        console.table(numeros)
-        console.table(vocales)
+        // console.table(numeros)
+        // console.table(vocales)
 
-        const perro = {
-            nombre: "Kenobi",
-            edad: "14",
-            color: "Blanco con tierra"
-        }
+        // const perro = {
+        //     nombre: "Kenobi",
+        //     edad: "14",
+        //     color: "Blanco con tierra"
+        // }
 
-        console.table(perro)
-        console.clear()
+        // console.table(perro)
+        // console.clear()
 
-        console.time("Cuanto tarda en cargar esta fregadera")
+        // console.time("Cuanto tarda en cargar esta fregadera")
 
-        const arreglo = Array(1000000)
+        // const arreglo = Array(1000000)
 
-        for (let i = 0; i<arreglo.length; i++){
-            arreglo[i];
-        }
+        // for (let i = 0; i<arreglo.length; i++){
+        //     arreglo[i];
+        // }
 
-        console.timeEnd("Cuanto tarda en cargar esta fregadera");
+        // console.timeEnd("Cuanto tarda en cargar esta fregadera");
 
-        // console.log(arreglo)
+        // // console.log(arreglo)
 
-        console.clear()
+        // console.clear()
 
-        for (let i = 0; i<=100; i++){
-            console.count("Codigo For")
-            console.log[i];
-        }
+        // for (let i = 0; i<=100; i++){
+        //     console.count("Codigo For")
+        //     console.log[i];
+        // }
 
-        console.clear()
+        // console.clear()
 
-        let x = 3;
-        let y = 2;
+        // let x = 3;
+        // let y = 2;
 
-        pruebaXY = "Se espera que x siempre sea menor que y"
+        // pruebaXY = "Se espera que x siempre sea menor que y"
 
-        console.assert(x<y, {x,y,pruebaXY})
+        // console.assert(x<y, {x,y,pruebaXY})
+
+        // VIDEO 27 OBJETO DATE -------------------------------------------------------------------------------------------------------
+
+        console.log(Date())
+
+        let fecha = new Date()
+        console.log(fecha)
+
+        // Utilizar dia del mes
+        console.log(fecha.getDate())
+
+        console.log(fecha.getDay())
+        console.log(fecha.getMonth())
+        console.log(fecha.getFullYear())
+
+        console.log(fecha.getHours())
+        console.log(fecha.getMinutes())
+        console.log(fecha.getSeconds())
+        console.log(fecha.getMilliseconds())
+
+
+        // ESTO ES MAS ENTENDIBLE
+        console.log(fecha.toString())
+        console.log(fecha.toDateString())
+        console.log(fecha.toLocaleString())
+
+        
+        // ESTO NOS DA SOLO LA FECHA
+        console.log(fecha.toLocaleDateString())
+
+        // ESTO NOS DA LA HORA
+        console.log(fecha.toLocaleTimeString())
+
+        // SOLO NOS DARA LA RFECHA
+        console.log(fecha.getTimezoneOffset())
+
+        // TODOS LOS UTC TE VAN A DAR LA HORA DEL MERIDIANO DE GREENWICH, Y LOS NORMALES TE DARAN LA HORA LOCAL
+
+        // OBTENER LA HORA 0
+        console.log(fecha.getUTCDate())
+
+        console.log(fecha.getUTCHours())
+
+        console.log(Date.now())
+
+
+        let cumpleYeya = new Date(2003,8,7)
+        console.log(cumpleYeya)
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+        
+        
 
 
     </script>
