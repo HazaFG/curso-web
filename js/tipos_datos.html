@@ -321,22 +321,22 @@
         //     console.log(`<li id = "${indice}">${el}<li>`)
         // })
 
-        // OTRO VIDEO -----------------------------------------------------------
+        // OTRO VIDEO ------------------------------------------------------------------------------
 
         // OBJETOS
 
-        let a = new String("hola")
-        // console.log(a)
+        // let a = new String("hola")
+        // // console.log(a)
 
-        // es importante definir como const los objetos
-        const b = {
+        // // es importante definir como const los objetos
+        // const b = {
 
-        }
+        // }
 
-        console.log(b)
+        // console.log(b)
 
-        const c = new Object();
-        console.log(c)
+        // const c = new Object();
+        // console.log(c)
 
         // LOS OBJETOS DENTRO DE UN OBJETO A LAS VARIABLES SE LES VAN A LLAMAR ATRIBUTOS/PROPIEDADES, Y A LAS FUNCIONES SE LES LLAMA METODOS
 
@@ -345,60 +345,137 @@
 
         // TODOS LOS QUE SEAN FUNCIONES VAN A NECESITAR PARENTESIS PORQUE SON FUNCIONES SON FUNCIONEEEES Y VAN A OCUPAR PARENTESIS JEJE
 
-        const haza = {
-            nombre: "Hazael",
-            apellido: "Flores",
-            edad:20,
-            pasatiempos:["Correr", "Hacer ejercicio", "Dar clases"],
-            soltero:false,
-            contacto: {
-                email: "hazaelfg",
-                twitter: "hazapro",
-                movil: "525353434"
-            },
+        // const haza = {
+        //     nombre: "Hazael",
+        //     apellido: "Flores",
+        //     edad:20,
+        //     pasatiempos:["Correr", "Hacer ejercicio", "Dar clases"],
+        //     soltero:false,
+        //     contacto: {
+        //         email: "hazaelfg",
+        //         twitter: "hazapro",
+        //         movil: "525353434"
+        //     },
 
-            saludar: function(){
-                console.log(`HOla :)`)
-            },
+        //     saludar: function(){
+        //         console.log(`HOla :)`)
+        //     },
 
-            decirNombre: function(){
-                // Siempre que querramos a acceder a un atributo dentro del objeto podemos usar this en javascript
-                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años, y me puedes seguir en Twitter como '${this.contacto.twitter}'`)
-            }
-        }
+        //     decirNombre: function(){
+        //         // Siempre que querramos a acceder a un atributo dentro del objeto podemos usar this en javascript
+        //         console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años, y me puedes seguir en Twitter como '${this.contacto.twitter}'`)
+        //     }
+        // }
 
-        console.log(haza)
-        console.log(haza["nombre"])
-        console.log(haza["apellido"])
+        // console.log(haza)
+        // console.log(haza["nombre"])
+        // console.log(haza["apellido"])
 
-        // LOS ATRIBUTOS NO SON MAS QUE VARIABLES QUE TIENE DENTRO UN OBJETO
-        console.log(haza.nombre)
-        console.log(haza.apellido)
-        console.log(haza.soltero)
-        console.log(haza.pasatiempos)
+        // // LOS ATRIBUTOS NO SON MAS QUE VARIABLES QUE TIENE DENTRO UN OBJETO
+        // console.log(haza.nombre)
+        // console.log(haza.apellido)
+        // console.log(haza.soltero)
+        // console.log(haza.pasatiempos)
 
-        // Hacer ejercicio
-        console.log(haza.pasatiempos[1])
+        // // Hacer ejercicio
+        // console.log(haza.pasatiempos[1])
 
-        // Acceder con objeto
-        console.log(haza.contacto)
-        console.log(haza.contacto.twitter)
+        // // Acceder con objeto
+        // console.log(haza.contacto)
+        // console.log(haza.contacto.twitter)
 
-        //Ejecutar funcion (con parentesis porque es funcion)
-        haza.saludar()
-        haza.decirNombre()
+        // //Ejecutar funcion (con parentesis porque es funcion)
+        // haza.saludar()
+        // haza.decirNombre()
 
-        // lista todo lo que tiene dentro el objeto
-        console.log(Object.keys(haza))
+        // // lista todo lo que tiene dentro el objeto
+        // console.log(Object.keys(haza))
 
-        // muestra los valores que tiene ese objeto
-        console.log(Object.values(haza))
+        // // muestra los valores que tiene ese objeto
+        // console.log(Object.values(haza))
 
-        // permite saber si tiene una propiedad existente en un objeto, en este caso seria el nombre, devolvera un booleano
-        console.log(haza.hasOwnProperty("nombre"))
+        // // permite saber si tiene una propiedad existente en un objeto, en este caso seria el nombre, devolvera un booleano
+        // console.log(haza.hasOwnProperty("nombre"))
 
-        // false
-        console.log(haza.hasOwnProperty("nacimiento"))
+        // // false
+        // console.log(haza.hasOwnProperty("nacimiento"))
+
+
+
+        // VIDEO 27 OBJETO DATE -------------------------------------------------------------------
+
+        console.log(Date());
+
+        let fecha = new Date()
+        console.log(fecha)
+
+        // Dia del mes
+        console.log(fecha.getDate())
+
+        // Dia de la semana - LUNES, MARTES, MIERCOLES, ETC
+        console.log(fecha.getDay())
+
+        // Obtener el mes
+        console.log(fecha.getMonth())
+        
+        // Este metodo no es muy util
+        console.log(fecha.getYear())
+
+        // Este si te dice el anio en el que estas
+        console.log(fecha.getFullYear())
+
+        // Obtenemos las horas
+        console.log(fecha.getHours())
+
+        // Obtenemos los minutos
+        console.log(fecha.getMinutes())
+
+        // Obtenemos los segundos
+        console.log(fecha.getSeconds())
+
+        // Obtenemos los milisegundos
+        console.log(fecha.getMilliseconds())
+
+        // Fecha completa
+        console.log(fecha.toString())
+
+        // Obtengo la pura fecha
+        console.log(fecha.toDateString())
+
+        // Fecha que si se entiende
+        console.log(fecha.toLocaleString())
+
+        // Este nos muestra la pura fecha, y bien
+        console.log(fecha.toLocaleDateString())
+
+        // ESto nos da la pura hora
+        console.log(fecha.toLocaleTimeString())
+
+
+        // No entendi bien para que es
+        console.log(fecha.getTimezoneOffset())
+
+
+        // Mas jaladas
+        console.log(fecha.getUTCDate())
+
+        // TODOS LOS UTC TE VAN A SERVIR PARA PODER MANEJAR LA HORA 0
+        console.log(fecha.getUTCHours())
+
+        //FECHA TIME STAMP
+
+        let cumpleHaza = new Date(2003, 4, 21)
+        console.log(cumpleHaza)
+
+        console.log(Date.now())
+
+        
+
+
+
+
+
+
     </script>
 </body>
 </html>
