@@ -229,44 +229,44 @@
         //     console.log("for " + i)
         // }
 
-        // let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+        let numeross = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 
         // for(let i = 0; i < numeros.length; i++){
         //     console.log(numeros[i])
         // }        
 
-        // //for in
+        //for in
 
-        // //va a permitir recorrer las propiedades de un objeto, es un for especial para un objeto
-
-
-        // const haza = {
-        //     nombre: "Haza",
-        //     apellido: "FG",
-        //     edad: 20
-        // }
+        //va a permitir recorrer las propiedades de un objeto, es un for especial para un objeto
 
 
-        // for (const propiedad in haza) {
-        //                                             //al parecer aqui puedo acceder
-        //                                             //al valor del objeto con un corchete "Haza", "FG", "20"
-        //     console.log(`Key: ${propiedad}, Value: ${haza[propiedad]}`)
-        // }
+        const haza = {
+            nombre: "Haza",
+            apellido: "FG",
+            edad: 20
+        }
 
 
-        // // forin solo permite recorrer propiedades de un objeto mientras que forof me va a permitir recorrer todos los elementos de cualquier elemento que sea iterable en js
-        // for (const elemento of numeros) {
-        //     console.log(elemento)
-        // }
+        for (const propiedad in haza) {
+                                                    //al parecer aqui puedo acceder
+                                                    //al valor del objeto con un corchete "Haza", "FG", "20"
+            console.log(`Key: ${propiedad}, Value: ${haza[propiedad]}`)
+        }
 
-        // //forof con una cadena de texto, iteraremos cada uno de los caracteres de la cadena de texto
+
+        // forin solo permite recorrer propiedades de un objeto mientras que forof me va a permitir recorrer todos los elementos de cualquier elemento que sea iterable en js
+        for (const elemento of numeross) {
+            console.log(elemento)
+        }
+
+        //forof con una cadena de texto, iteraremos cada uno de los caracteres de la cadena de texto
 
 
-        // let cadena = "Hola mundo"
+        let cadena = "Hola mundo"
 
-        // for (const caracter of cadena) {
-        //     console.log(caracter)
-        // }
+        for (const caracter of cadena) {
+            console.log(caracter)
+        }
 
         // OTRO VIDEO --------------------------------------------- MANEJO DE ERRORES
 

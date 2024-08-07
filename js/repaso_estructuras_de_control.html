@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso de estructuras de control</title>
+</head>
+<body>
+
+    <h1>Esto lo haces porque no recuerdas nada de javascript</h1>
+
+    <script>
+
+        // VIDEO TIPOS DE OPERADORES --------------------------------------------------------------------------------------------------------------------------
+
+
+        // OPERADORES
+
+        // Aritmeticos + - * / % () 
+
+        // let a = 5 + 5 - 10*3
+
+        // let modulo = 5 % 2
+
+        // // EL OPERADOR DEL % NOS DEVUELVE EL RESIDUO
+
+        // console.log(a)
+        // console.log(modulo)
+
+        // OPERADORES RELACIONALES
+
+        // NO VEO NECESARIO REPASAR NUEVAMENTE LOS OPERADORES
+
+
+
+        // MANEJO DE ERRORES VIDEO --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        console.log("VIDEO 16 MANEJO DE ERRORES -------------------------------\n")
+        console.log("\n")
+        console.log("\n")
+        console.log("\n")
+
+
+        try {
+            console.log("En el try se agrega el codigo a evaluar")
+            // SI EXISTE UN ERROR AQUI NO SE EJECUTARA NADA QUE HAYA DEBAJO DEL ERROR
+            noExiste;
+            console.log("Segundo mensaje en el try")
+        } catch (error) {
+            console.log("Catch captura cualquier error surgido o lanzado en el try")
+            console.log(error)
+        }finally{
+            console.log("El bloque finally se ejecutara siempre al final de un bloque try catch")
+        }
+
+        console.log("----------------------------------------------\n")
+        console.log("----------------------------------------------\n")
+        console.log("----------------------------------------------\n")
+        console.log("----------------------------------------------\n")
+
+        try {
+            // let numero = 10 //ASI NO SE PRODUCE ERROR
+            let numero = "peponte" //ASI SE PRODUCE ERROR
+            if(isNaN(numero)){
+                throw new Error("La andas cagando")
+            }
+
+            // Si sale error esta linea pues no se va a ejecutar
+            console.log(numero * numero)
+        } catch (error) {
+            console.log(`Se produjo el siguiente error ${error}`)
+        }
+
+        // EL FINALLY NO SE USA DE MOMENTO
+
+
+
+        // VIDEO BREAK AND CONTINUE
+
+        console.log("\n")
+        console.log("\n")
+        console.log("\n")
+        console.log("VIDEO 17 BREAK AND CONTINUE -------------------------------\n")
+        console.log("\n")
+
+
+
+        const numeros = [1,2,3,4,5,6,7,8,9,0]
+        
+        // BREAK Y CONTINUE NO SE PUEDEN UTILIZAR EN METODOS DE LOS ARREGLOS
+
+        //recorrer arreglo, VAMOS A USAR BREAK
+        for (let i = 0; i < numeros.length; i++){
+
+            if(i === 5){
+                break; //Break se sale de la estructura en la que esta
+            }
+
+            console.log(numeros[i])
+        }
+
+        console.log("\n")
+
+        // VAMOS USAR CONTINUE
+        for (let i = 0; i < numeros.length; i++){
+
+            if(i === 5){
+                continue; //Continue omite que imprimas esa iteracion, y continua, digamos que se la va saltar y continuara con la ejecucion
+            }
+
+            console.log(numeros[i])
+        }
+
+        console.log("\n")
+        console.log("\n")
+        console.log("\n")
+        console.log("VIDEO 18 DESTRUCTURACION -------------------------------\n")
+        console.log("\n")
+
+
+        // let numeross = [1,2,3]
+
+        // // Sin usar destructuracion
+        // let uno = numeross[0],
+        //     dos = numeross[1],
+        //     tres = numeross[2]
+
+        // console.log("Sin destructuracion")
+        // console.log(uno, dos, tres)
+
+        // console.log("\n")
+
+        // // Esto es con destructuracion, guardando las variables dinamicamente en one two three
+        // const [one, two, three] = numeross;
+
+        // console.log("Con destructuracion")
+        // console.log(one, two, three)
+
+        // const persona = {
+        //     nombre: "Hazael",
+        //     apellido: "Flores",
+        //     edad: "21"
+        // }
+
+        // // Destructuracion, (PARA QUE FUNCIONE EN LOS OBJETOS ES IMPORTANTE QUE SE LLAMEN IGUAL)
+        // let {nombre, apellido, edad} = persona;
+
+        // console.log(nombre, apellido, edad)
+
+
+        // VIDEO OBJETOS LITERALES
+
+
+        // los objetos literales no son mas que una manera nueva de tener atributos y propiedades
+
+        console.log("\n")
+        console.log("\n")
+        console.log("\n")
+        console.log("VIDEO 19 OBJETOS LITERALES -------------------------------\n")
+        console.log("\n")
+
+
+        // ANTES
+
+        let nombre = "Kenobi",
+            edad = 15;
+
+        const perro = {
+            nombre: nombre,
+            edad: edad,
+            ladrar: function(){
+                console.log("WAU WAU")
+            }
+        }
+
+        console.log(perro)
+        perro.ladrar()
+
+        console.log("\n")
+
+        // CON LAS NUEVAS CARACTERISTICAS
+
+        // Aqui lo que estas haciendo es que lo puedes guardar de esta manera siempre y cuando tus variables se llamen igual
+        const dog = {
+            nombre,
+            edad,
+            // podemos agregar otro atributo que no este en la variable
+            raza: "Callejero",
+
+            //Puedo hacer la funcion de esta maneraaa, sin necesidad de poner el function
+            ladrar(){
+                console.log("WAU WAU WAU")
+            }
+
+        }
+
+        console.log(dog)
+        dog.ladrar()
+
+        console.log("\n")
+        console.log("\n")
+        console.log("\n")
+        console.log("VIDEO 20 PARAMETROS REST Y OPERADOR SPREAD ---------------\n")
+        console.log("\n")
+
+
+        // REST SON UNA FORMA DE IR AGREGANDO PARAMETROS INFINITOS, YA VERAS COMO JEJEJE, ES PARA CUANDO NO SABES CUANTOS VALORES VAS A NECESITAR EN UN ARREGLO POR EJEMPLO
+
+
+        function sumar(a,b, ...c){
+            let resultado = a + b;
+
+            c.forEach(function(n){
+                // console.log(c)
+                resultado = resultado + n
+            })
+
+            return resultado;
+        }
+
+        console.log(sumar(1,2))
+        console.log(sumar(1,2,3)) //Aqui la variable c almacena 1
+        console.log(sumar(1,2,3,4)) //Aqui la variable c almacena 2
+        console.log(sumar(1,2,3,4,5)) //Aqui la variable c almacena 3
+        console.log(sumar(1,2,3,4,5,6))
+        console.log(sumar(1,2,3,4,5,6,7))
+
+
+        const arr1 = [1,2,3,4,5]
+        const arr2 = [6,7,8,9,0]
+
+        console.log(arr1, arr2)
+
+        // VAMOS A CREAR UN TERCER ARREGLO A PARTIR DE ESTOS 2
+
+        const arr3 = [...arr1, ...arr2]
+        console.log(arr3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
