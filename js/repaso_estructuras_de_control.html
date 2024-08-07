@@ -237,10 +237,173 @@
         console.log(arr3)
 
 
+        console.log("\n")
+        console.log("\n")
+        console.log("\n")
+        console.log("VIDEO 21 ARROW FUNCTIONS ---------------\n")
+        console.log("\n")
+
+        // LAS ARROW FUNCTIONS SON UNA NUEVA FORMA DE DEFINIR FUNCIONES ANONIMAS (QUE NO TIENEN NOMBRE)
+
+        // FUNCIONES DECLARADA 
+
+        function nombreDeLaFuncion(param1, param2) {
+            // cuerpo de la función
+        }
+
+        // Cosas a tener en cuenta con las funciones declaradas: 
+
+        /*
+            1 - Hoisting (Elevación): Las funciones declaradas son elevadas (hoisted) al principio de su ámbito durante la fase de compilación. Esto significa que puedes llamar a una función declarada antes de que aparezca en el código.
+
+            2 - Las funciones declaradas tienen nombre
+        */
+
+        // LA PUEDO LLAMAR INCLUSO ANTES DE QUE ESTA APAREZCA EN EL CODIGO
+
+        saludo(); // "Hola, mundo!"
+
+        function saludo() {
+            console.log("Hola, mundo!");    
+        }
+
+        // AHORA VAMOS CON LAS FUNCIONES EXPRESADAS
+
+        console.log("\n")
+        console.log("\n")
+
+        // Una funcion expresada se forma cuando a una variable le asignas el valor de una funcion anonima
+
+        const saludar = function(){
+            console.log(`Hola`)
+        }
+
+        saludar()
+
+        console.log("\n")
 
 
+        // LAS ARROW FUNCTIONS NO ES MAS QUE SOLO QUITAR EL function(), y despues del parentesis colocar una =>
+
+        const saludos = () => {
+            console.log("Hola Arrow function")
+        }
+
+        saludos()
+
+        console.log("\n")
 
 
+        // Cuando la funcion flecha tiene solo una linea de codigo dentro, se puede dejar en una sola linea, y remover las llaves
+
+        const linea = () => console.log("Mira estoy en una sola linea")
+        linea()
+
+        //Arrow function recibiendo parametros, cuando recibe un parametro no es ni necesario los parentesis en los parametros tampoco
+        const otroSaludo = nombre => console.log(`Hola ${nombre}`)
+        otroSaludo("Hazael")
+
+        const sumas = function(a,b){
+            return a + b
+        }
+
+        console.log(sumas(8,9))
+
+        console.log("\n")
+
+        // CON LAS ARROW FUNCTIONS NOS PODEMOS AHORRA ESE RETURN Y ESE FUNCTION
+
+        const sumasDos = (a,b) => a + b
+
+        console.log(sumasDos(9,9))
+
+        // CUANDO UNA FUNCION PUES TIENE VARIAS LINEA TENEMOS QUE RESPETAR EL CUERPO DE LA FUNCION
+
+        const funcionDeVariasLineas = () => {
+            console.log("UNO")
+            console.log("DOS")
+            console.log("TRES")
+        }
+
+        funcionDeVariasLineas()
+
+        console.log("\n")
+
+        // OTROS APARTADOS MUY INTERESANTES = metodos para iterar sobre los elementos de estos
+
+        const arrNumeros = [1,2,3,4,5]
+
+        arrNumeros.forEach(function(elemento, posicion){
+            console.log(elemento, posicion)
+        })
+
+        /*
+        
+            En JavaScript, el método forEach de los arrays permite ejecutar una función para cada elemento del array. Este método acepta una función de devolución de llamada (callback) que se ejecuta una vez por cada elemento del array. Esta función de devolución de llamada puede tener hasta tres parámetros:
+
+                Elemento actual: El primer parámetro es el elemento actual del array que se está procesando en ese momento.
+
+                Índice: El segundo parámetro es el índice del elemento actual que se está procesando.
+                
+                Array original: El tercer parámetro es el array sobre el que se está ejecutando forEach (aunque este no es tan comúnmente usado).
+
+            La razón por la que tu código muestra tanto el elemento como su posición es porque has definido la función de devolución de llamada con dos parámetros, elemento y posicion. El método forEach pasa automáticamente el índice como el segundo argumento a la función de devolución de llamada.
+
+        */
+
+        console.log("\n")
+
+        // Esto lo podemos transfomar a arrow function
+
+        arrNumeros.forEach((elemento, posicion) => {
+            console.log(`${elemento} esta en la posicion ${posicion}`)
+        })
+
+        console.log("\n")
+
+        // Y como todo esto esta en una sola linea, podemos omitir las llaves
+
+        arrNumeros.forEach((elemento, posicion) => console.log(`${elemento} esta en la posicion ${posicion}`))
+
+
+        // Mas fregaderas, vamos a ver algo del this
+
+        function Perro(){
+            console.log(this) //Tienes que tener cuidado, porque this obedece al contexto en el que se encuentrea, y como esta es una funcion declarada, recuerda que por el hoisting esta se hace global, asi que el this de aqui, hacer referencia a TOOOODA LA WINDOW
+        }
+
+        Perro()
+
+        // imagina que ahora en lugar de una funcion tengo un objeto
+        
+        const perroo = {
+            nombre: "Kenobi",
+            ladrar: function(){
+                console.log(this)
+            }
+        }
+
+        //Aqui el THIS, hace solo referencia a este objeto, solo funciona para este
+        perroo.ladrar()
+
+
+        //TIENES QUE TENER CUIDADO, SI CAMBIAS A ARROW FUNCTION DESDE EL CONTEXTO EN EL QUE ESTAS, YA QUE AL HACERLO, LAS ARROW FUNCTIONS SE BRINCAN EL CONTEXTO EN EL QUE ESTAN, Y SE PUEDEN SALIR, COMO EN ESTE CASO, SE SALEN DEL OBJETO PERROOO Y SE VUELVE GLOBAL EL THIIISSSSS
+
+        const perrooo = {
+            nombre: "Kenobi",
+
+            //No es buena practica meter arrow functions dentro de objetos literales
+            ladrar:()=>{
+                console.log(this)
+            },
+
+            // Esta si es una buena practica, ESTO ES UNA FUNCION, recuerda los objetos literales
+            buenaPractica(){
+                console.log(this)
+            }
+        }
+
+        perrooo.ladrar()
 
 
 
