@@ -269,15 +269,152 @@
         // CORTOCIRCUITO AND - Cuando el valor de la izquierda en la expresion siempre pueda validar a flase, es el valor que se cargara por defecto
 
 
-        function saludar(nombre){
-            // Este es un operador corto circuito
-            nombre = nombre || "Desconocido"
-            console.log(`Hola ${nombre}`)
-        }
+        // console.log("\n")
+        // console.log("\n")
+        // console.log("\n")
+        // console.log("VIDEO 29 OPERDADOR CORTOCIRCUITO -------------------------------\n")
+        // console.log("\n")
+
+        // function saludar(nombre){
+        //     // Este es un operador corto circuito
+        //     nombre = nombre || "Desconocido"
+
+        //     // Lo imprimimos
+        //     console.log(`Hola ${nombre}`)
+        // }
 
 
-        saludar("Hazael")
-        saludar()
+        // saludar("Hazael")
+        // saludar()
+
+
+        // // Cuando el valor de la izquierda sea truthy, ese es el que se va a imprimir
+        // console.log("\nAqui se imprime el valor de la derecha, ya que es true el valor de la izquierda")
+
+
+        // // SOLO TIENES QUE ENTENDER QUE CUANDO EL VALOR DE LA IZQUIERDA TIENDA A TRUE Y ESTAS USANDO OR, SE VA A LEER LA IZQUIERDA, PERO CUANDO ESTES USANDO AND, va a buscar valores que tiendan a falso
+
+        // console.log("cadena" || "Valor de derecha")
+        // console.log(19 || "Valor de derecha")
+        // console.log(true || "Valor de derecha")
+        // console.log([] && "Valor de la derecha")
+        // console.log({} || "Valor de la derecha")
+
+
+        // // Ahora cuando el valor de la izquierda es false:
+        // console.log(null && "Valor de la derecha")
+        // console.log("" && "Valor de la derecha")
+        // console.log(-2 && "Valor de la derecha")
+
+
+
+        // // Ahora con cortocircuito and
+
+        // console.log(false && "Valor de la derecha")
+
+        // // Me tumbo este comentario por si es de ayuda mas tarde
+
+        // console.log("Me encanto la clase!. Básicamente con este operador de cortocircuito podemos entender mejor como funciona el OR y el AND que de la misma manera funciona cuando lo ponemos como condición, el porque en el OR si cualquiera de los dos es verdadero devuelve true, y en el AND si uno de los dos es falso devuelve falso, muchas gracias.")
+
+
+
+        // console.log("\n")
+        // console.log("\n")
+        // console.log("\n")
+        // console.log("VIDEO 30  ALERT, CONFIRM Y PROMPT\n")
+        // console.log("\n")
+
+        // // Estos metodos heredan de window, por lo que en el javascript de node js no se pueden utilizar ya que no hay window
+
+        // console.log(window)
+
+        // // alert("Hola esto es una alerta")
+        // // confirm("Hola esto es una confirmacion")
+        // // prompt("Hola esto es un prompt y le permite al usuario ingresar un valor")
+
+
+        // // let alerta =  alert("Hola esto es una alerta")
+        // // let confirmacion = confirm("Hola esto es una confirmacion")
+        // // let aviso = prompt("Hola esto es un aviso y le permite al usuario ingresar un valor")
+
+
+        // // console.log(alerta)
+        // // console.log(confirmacion)
+        // // console.log(aviso)
+
+
+        // console.log("\n")
+        // console.log("\n")
+        // console.log("\n")
+        // console.log("VIDEO 31  EXPRESIONES REGULARES\n")
+        // console.log("\n")
+
+
+        // // EXPRESION REGULAR: UNA SECUENCIA DE CARACTERES QUE FORMAN UN PATRON DE BUSQUEDA, QUE PRINCIPALMENTE SE USA EN LAS CADENAS DE TEXTO PARA BUSCAR PATRONES
+
+        // let cadena = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at mi ullamcorper, semper justo in, accumsan ex. Proin lorem rutrum ligula, in vestibulum quam malesuada et. Maecenas ut faucibus enim. Fusce consequat arcu felis, quis semper leo posuere at. 9"
+
+
+        // //La i es una bandera que ignora mayusculas y minusculas
+        // // La g significa que no solo se quedara con la primer coincidencia
+        // // Los [] significan un listado valido 
+        // // Las {} significan repeticiones
+
+        // // let regex = new RegExp("lorem", "ig")
+        // // console.log(regex.test(cadena))
+        // // console.log(regex.exec(cadena))
+
+        // let regex2 = /lorem{1}/ig;
+        // console.log(regex2.test(cadena)) //Devuelve un booleano
+        // console.log(regex2.exec(cadena)) //te da info
+
+        // console.log("\n")
+        // console.log("\n")
+        // console.log("\n")
+        // console.log("VIDEO 32  FUNCIONES ANONIMAS AUTOEJECUTABLES\n -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------==================================================================================================================================================================================================================================================================")
+        // console.log("\n")
+
+
+        // PARA ENTENDER TODO ESTO ES MEJOR DESCOMENTARLO
+
+        // Funcion anonima auto ejecutable
+        //alert dentro de window es una funcion que tiene de nombre alert, y los parentesis indican ejecucion, como serua una fucnion que no tiene nombre y se autoejecuta?
+        // alert("HOLA")
+
+        
+        // como seria una fucnion que no tiene nombre y se autoejecuta?
+        
+        // // Seria asi:
+        // (function (){})()
+
+        // // Le damos enter: 
+        // (function (){
+
+        // })(); //Aqui es de los pocos casos en donde SI ES NECESARIO USAR PUNTO Y COMA ;
+
+        (function (){
+            console.log("Mi primera IIFE")
+
+        })(); //Aqui es de los pocos casos en donde SI ES NECESARIO USAR PUNTO Y COMA ;
+
+        (function (paramDocument, paramWindow, paramConsole){
+            console.log("Mi segunda IIFE")
+            console.log(paramDocument)
+            console.log(paramWindow)
+            paramConsole.log("MIRAAA ESTE ES UN CONSOLE LOG EJECUTADO DESDE LA FUNCION")
+
+        })(Document, window, console); //Aqui es de los pocos casos en donde SI ES NECESARIO USAR PUNTO Y COMA ;
+
+        //alert("HOLA") //Es lo mismo, solo que aqui el nombre de la funcion es alert, y pues function es una funcion anonima que no tiene nombre y que esta dentro de un parentesis, el parentesis de afuera es el que ejecuta la funcion
+
+
+
+        // VIDEO 33 MODULOS IMPORT Y EXPORT  ==========================================================================================================================================================================================================================================================================================
+
+        
+
+
+
 
 
 
