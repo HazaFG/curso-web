@@ -43,9 +43,20 @@ recortar("Hola mundo", 4)
 
 // SOLUCION DE MIRCHA: 
 
+console.log("\nSolucion de mircha:\n")
 
+const recortarTexto = (chainText = " ", longitud = undefined) =>
+    (!chainText)
+    ? console.warn("No ingresaste ninguna cadena de texto")
+    : console.info(chainText.slice(0, longitud))
 
+recortarTexto("Hola mundo", 4)
 
+// Las cadenas de texto tienen un metodo que se llama slice que tiene varias opciones, pero para esta ejemplo, recibe 2 parametros:
+
+    // El primero es desde que caracter empieza, y el segundo es hasta donde se detiene:
+
+    // Ejemplo: slice(inicio, final)
 
 
 // ====================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -54,21 +65,65 @@ recortar("Hola mundo", 4)
 
 console.log("\nEjercicio 3:\n")
 
-const separar = (texto) => {
+const separar = (texto, digitoSeparador) => {
     const [] = texto;
-    console.log(texto.split(" "))
+    console.log(texto.split(digitoSeparador))
 }
 
-separar("Hola que tal")
+separar("Hola que tal", ' ')
+
+// SOLUCION DE MIRCHA: 
+
+console.log("\nSolucion de mircha\n")
+
+const separarTexto = (text, separador = undefined) => 
+    (!text)
+    ? console.warn("No has ingresado ninguna cadena de texto")
+    : (separador === undefined) 
+        ? console.warn("No ingresaste el caracter que separa jeje")
+        : console.info(text.split(separador))
+
+separarTexto("Hola que tal", ' ')
+
+
+// ====================================================================================================================================================================================================================================================================================================================================================================================================================================
+
 
 // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
 
 console.log("\nEjercicio 4:\n")
 
-const repetir = (letras, repeticiones) =>{
-    for(let i = 0; i<repeticiones; i++){
-        console.log(letras)
+const repetir = (letras, repeticiones) => {
+    for(let i = 0; i < repeticiones; i++){
+        console.info(`${i} ${letras}`);
     }
 }
 
-repetir("PEPO", 5)
+repetir("Hola Mundo", 5)
+
+// SOLUCION DE MIRCHA
+
+console.log("\nSolucion de Mircha: \n")
+
+const repetirTexto = (textooo = "", veces = undefined) => {
+    if(!textooo){
+        //Recuerda que return hace que ahi termine la funcion
+        return console.warn("No ingresaste ningun texto")
+    }
+
+    if(veces === undefined)
+        return console.warn("No ingresaste el numero de veces a repetir el texto");
+
+    if(veces === 0)
+        return console.error("El numero de veces no puede ser de 0")
+
+    if(Math.sign(veces) === -1) 
+        return console.error("El numero no puede ser negativo")
+
+    for(let y =1; y<=veces; y++){
+        console.info(`${textooo}, ${y}`)
+    }
+}
+
+
+repetirTexto("Hola mundo", 5)
