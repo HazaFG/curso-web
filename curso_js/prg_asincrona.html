@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programacion asincrona</title>
+</head>
+<body>
+    <h1>SECCION DE PROGRAMACION ASINCRONA</h1>
+
+    <script>
+        // VIDEO 45 - TEMPORIZADORES -----------------------------------------------------------------
+
+        // Existen 2 temporizadores
+
+        console.log("Inicio")
+
+        // // Este se va a ejecutar despues del tiempo que yo setee
+        // setTimeout(() => {
+        //     console.log("Ejecutando un setTimeOut, esto se ejecuta una sola vez")
+        // }, 3000);
+
+        // // Este es diferente
+
+        // setInterval(() => {
+        //     console.log("Ejecutando un SetInterval, esto se ejecuta indefinidamente cada cierto intervalo de tiempo")
+        // }, 1000);
+
+        // Ponemos la hora en tiempo real jeje
+        // setInterval(() => {
+        //     console.log(new Date().toLocaleTimeString())
+        // }, 1000)
+
+
+        // PRUEBA DE QUE PODEMOS CANCELAR EL setTimeOut
+
+        // let temporizador = setTimeout(() => {
+        //     console.log(new Date().toLocaleTimeString())
+        // }, 1000)
+
+        // // Esto cancela un setTimeOut, asi que no se imprime nada en pantalla
+        // clearTimeout(temporizador)
+
+        let otroTemporizador = setInterval(() => {
+            console.log(new Date().toLocaleDateString())
+        }, 1000);
+
+        // Esto cancela el interval, asi que no se imprime nada en pantalla
+        clearInterval(otroTemporizador)
+
+        console.log("Despues del clearTimeOut")
+
+    </script>
+
+    
+
+
+    
+</body>
+</html>
