@@ -34,12 +34,12 @@
 
         // PRUEBA DE QUE PODEMOS CANCELAR EL setTimeOut
 
-        // let temporizador = setTimeout(() => {
-        //     console.log(new Date().toLocaleTimeString())
-        // }, 1000)
+        let temporizador = setTimeout(() => {
+            console.log(new Date().toLocaleTimeString())
+        }, 1000)
 
-        // // Esto cancela un setTimeOut, asi que no se imprime nada en pantalla
-        // clearTimeout(temporizador)
+        // Esto cancela un setTimeOut, asi que no se imprime nada en pantalla
+        clearTimeout(temporizador)
 
         let otroTemporizador = setInterval(() => {
             console.log(new Date().toLocaleDateString())
@@ -49,6 +49,13 @@
         clearInterval(otroTemporizador)
 
         console.log("Despues del clearTimeOut")
+
+
+
+
+
+
+
 
     </script>
 

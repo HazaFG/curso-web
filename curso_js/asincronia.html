@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronia</title>
+</head>
+<body>
+    <h1>Asincronia en javascript</h1>
+
+    <script>
+        // VIDEO 46 ASINCRONIA Y EL EVENT LOOOOOOOOOOOOOOOP --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Antes de explicar comoi funciona el modelo de js es importante entender algunos conceptos: 
+
+        // Procesamiento Single thread y Multi thread.
+        // Operaciones de CPU y Opoeraciones de I / O (Entradas / Salidas)
+        // Opreaciones Bloqueantes y No Bloqueantes.
+        // Opreaciones Sincronas y Asincronas
+
+        // vamos a tener dos tipos de codigo -----------------------------
+
+        // Codigo sincrono bloqueante.
+
+        (() => {
+            console.log("Codigo Sincrono")
+            console.log("Inicio")
+
+            function dos(){
+                console.log("Dos")
+            }
+
+            function uno(){
+                console.log("Uno")
+                dos()
+                console.log("Tres")
+            }
+
+            uno() // <= Este es el primero en ejecutarse
+            console.log("Fin")
+
+            /*Respuesta en consola:
+        
+                Codigo Sincrono
+                Inicio
+                Uno
+                Dos
+                Tres
+                Fin
+
+            */
+            
+        })();
+
+
+        // Codigo asincrono no bloqueante.
+
+        (() => {
+            console.log("\nCodigo Asincrono")
+            console.log("Inicio")
+
+            function dos(){
+                
+                // Aunque aparentemente este setTimeOut es instantaneo, el simple hecho de ser un setTimeOut hace que se vaya a la cola de la pila
+                setTimeout(() => {
+                    console.log("Dos")
+                }, 1000);
+            }
+
+            function uno(){
+
+                // Aunque aparentemente este setTimeOut es instantaneo, el simple hecho de ser un setTimeOut hace que se vaya a la cola de la pila
+                setTimeout(() => {
+                    console.log("Uno")
+                }, 0);
+
+                dos()
+                console.log("Tres")
+            }
+
+            uno();
+            console.log("Fin")
+
+            /*Respuesta en consola
+
+                Codigo Asincrono
+                Inicio
+                Tres
+                Fin
+                Uno
+                Dos
+            */
+            
+        })();
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
