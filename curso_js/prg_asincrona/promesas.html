@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas</title>
+</head>
+<body>
+    <h1>Promesas en javascriptt</h1>
+
+    <script>
+        // VIDEO 47 PROMESAS EN JAVASCRIPT ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Estas nos ayudan con el callback hell, nos ayudan a manejar estos problemas
+
+        // Una promesa la tenemos que ver como un if-else, se usa resolve y el reject, si la promesa se cumple, es decir, una peticion, se ejecuta el resolve
+
+        // Si la promesa falla, pues ejecuta el reject
+
+        // MISMA FUNCION QUE EN LOS CALLBACKS (para entender como jala ve a callbacks)
+
+        function cuadradoPromise(valor){
+            //Por si el usuario nos pasa algo que no es un numero
+            if(typeof valor !== "number") {
+                //Usamos el reject
+                return Promise.reject(`Error, el valor "${valor}" ingresado no es un numero`)
+            }
+
+
+                // Recuerda que promise tiene dos partes, resolve, reject
+            return new Promise((resolve, reject) => {
+                setTimeout( () => { //Recuerda que esto es una funcion
+
+                    // Vamos a hacer un objeto {}
+                    resolve({ //true, este sera el then
+                        valor: valor,
+                        resul: valor * valor
+                    })
+
+                }, 0 | Math.random() * 1000);
+            })
+        }
+
+        // Tenemos metodos para trabajar asincronia cuando estamos ejecutando una promesa
+        // then (podemos tener tantos then como nosotros los necesitemos)
+        cuadradoPromise(0)
+        .then(obj => { //AQUI ES CUANDO ESTA FUNCIONANDO EL RESOLVE BRO
+            console.log(obj) //no termino de entender que es esto.
+            console.log("Inicia Promise");
+            console.log(`Promise ${obj.valor}, ${obj.resul}`)
+            return cuadradoPromise(1);
+        })
+        .then(obj =>{
+            console.log(`Promise ${obj.valor}, ${obj.resul}`)
+            return cuadradoPromise(2);
+        }) 
+        .then(obj => {
+            console.log(`Promise ${obj.valor}, ${obj.resul}`)
+            return cuadradoPromise("0");
+        })
+        .then(obj => {
+            console.log(`Promise ${obj.valor}, ${obj.resul}`)
+            return cuadradoPromise(4);
+        })
+        .then(obj => {
+            console.log(`Promise ${obj.valor}, ${obj.resul}`)
+            return cuadradoPromise(5);
+        })
+        .then(obj =>{
+            console.log(`Promise ${obj.valor}, ${obj.resul}`)
+            console.log("Fin de la promesa")
+        })
+
+
+        .catch(err => { //false, AQUI ESTA EL REJECT
+            console.error(err)
+        }) //false
+
+
+
+
+    </script>
+    
+</body>
+</html>

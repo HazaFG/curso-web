@@ -29,13 +29,13 @@
         function cuadradoCallback(valor, callback){
             setTimeout( () => { //Recuerda que esto es una funcion
                 //Esto se llama callback porque se ejecuta despues de que el tiempo de espera se haya finalizado
-                callback(valor, valor * valor)
+                callback(valor, valor * valor) // Recuerda que hay dos parametros futuros, los cuales son (valor, resultado) ojito ahi
             }, 0 | Math.random() * 1000);
         }
 
 
         // Vamos a ejecutar la funcion, vamos a elevar el 0, y pasaremos una arrow function como otro parametro, LEE BIEN ESTO SI LO VUELVES A LEER DENTRO DE MAS TIEMPO POR FAVOR, NO TE FRUSTRES, ESTO YA LO ENTENDISTE AHORITA, PUEDES ENTENDERLO DE NUEVO
-        cuadradoCallback(0, (valor, resultado)=> {
+        cuadradoCallback(0, function (valor, resultado) {
             // Con que entiendas esto ya la armas
             console.log("Inicia Callback")
             console.log(`Callback: ${valor}, ${resultado}`)
