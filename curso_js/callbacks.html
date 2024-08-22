@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks en javascriptt</title>
+</head>
+<body>
+    <h1>Callbacks en javascriptt</h1>
+
+    <h2>Usa esto como ayuda si no entiendes o se te olvida como funciona esa mierda toda revuelta, recuerda que en este ejemplo se explica por que batallas con la linea que esta dentro del setTimeOut()</h2>
+
+    <img src="img/callback_help.png" alt="">
+    <img src="img/callback_help2.png" alt="">
+
+    <script>
+        // VIDEO 46 CALLBACKS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Se van a resolver al futuro, son no bloqueantes, cuando se ejecutan, van a regresar el control al hilo principal del porogama, y en el momento que esa respuesta este lista pues se ejecutara el resultado. Para trabajar la asincronia js tiene varios mecanismos, el cual uno de ellos es el callback
+
+        // Es el mecanismo por excelencia de js
+
+
+        // VAMOS A USAR SETTIMEOUT PARA SIMULAR QUE HACEMOS UNA CONSULTA A UNA API
+
+        // TIENES QUE TENER EN CUENTA QUE CUADRADO CALLBACK RECIBE COMO PARAMETRO UNA FUNCION, UNA FUNCIOOOOOOOON, ah, y tambien pues recibe un valor
+
+        // valor es el valor que se va a elevar al cuadrado, callback va a ser una funcion(creo)
+        function cuadradoCallback(valor, callback){
+            setTimeout( () => { //Recuerda que esto es una funcion
+                //Esto se llama callback porque se ejecuta despues de que el tiempo de espera se haya finalizado
+                callback(valor, valor * valor)
+            }, 0 | Math.random() * 1000);
+        }
+
+
+        // Vamos a ejecutar la funcion, vamos a elevar el 0, y pasaremos una arrow function como otro parametro, LEE BIEN ESTO SI LO VUELVES A LEER DENTRO DE MAS TIEMPO POR FAVOR, NO TE FRUSTRES, ESTO YA LO ENTENDISTE AHORITA, PUEDES ENTENDERLO DE NUEVO
+        cuadradoCallback(0, (valor, resultado)=> {
+            // Con que entiendas esto ya la armas
+            console.log("Inicia Callback")
+            console.log(`Callback: ${valor}, ${resultado}`)
+
+            console.log("\nCallback hell, no es necesario que le prestes mucha atencion\n")
+
+            // Aqui comienza el callback hell, ten mucho cuidado
+            cuadradoCallback(1, (valor, resultado)=> {
+                console.log(`Callback: ${valor}, ${resultado}`)
+                cuadradoCallback(2, (valor, resultado)=> {
+                    console.log(`Callback: ${valor}, ${resultado}`)
+                    cuadradoCallback(3, (valor, resultado)=> {
+                        console.log(`Callback: ${valor}, ${resultado}`)
+                        cuadradoCallback(4, (valor, resultado)=> {
+                            console.log(`Callback: ${valor}, ${resultado}`)
+                            cuadradoCallback(5, (valor, resultado)=> {
+                                console.log(`Callback: ${valor}, ${resultado}`)
+                            })
+                        })
+                    })
+                })
+            })
+        })
+        
+
+
+
+    </script>
+    
+</body>
+</html>
