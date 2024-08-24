@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos tipos de datos en Javascript</title>
+</head>
+<body>
+    <h1>Nuevos tipos de datos</h1>
+
+    <!-- Es un tipo de dato como boolean, etc -->
+
+    <script>
+        // Suelen agregarse como caracteristicas
+
+        // nos permitebn crear identificadores unicos de referencia
+
+        //No se puede usar el operador NEW para instanciar un symbol
+
+        let id = Symbol("id")
+        let id2 = Symbol("id2")
+
+        console.log(id === id2)
+        console.log(typeof id, typeof id2)
+
+        //Buenas practicas es construirlo con constantes
+        // Las constantes se tienen que escribir con mayusculas
+        const NOMBRE = Symbol();
+        const SALUDAR = Symbol();
+
+        const persona = {
+            [NOMBRE]: "Hazael"
+        }
+
+        console.log(persona)
+
+        persona.NOMBRE = "Hazael Flores" //propiedad corriente
+        console.log(persona)
+
+        //Para usarla como simbolo
+        console.log(persona[NOMBRE])
+
+        persona[SALUDAR] = function() {
+            console.log("Hola")
+        }
+
+        console.log(persona)
+
+        persona[SALUDAR]();
+
+
+        for (let propiedad in persona){
+            console.log(propiedad) // Propiedad corriente
+            console.log(persona[propiedad]) //Propiedad chida
+        }
+
+    </script>
+    
+</body>
+</html>
