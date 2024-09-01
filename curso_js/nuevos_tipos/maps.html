@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos tipos de datos en Javascript</title>
+</head>
+<body>
+    <h1>MAPS EN Javascript</h1>
+
+    <script>
+        //CLASE NUMERO 51
+
+        // COLECCION DE DATOS MUY PARECIDA A UN OBJETO PRIMITIVO
+
+        let mapa = new Map();
+        mapa.set("Nombre", "Hazael")
+        mapa.set("Apellido", "Flores")
+        mapa.set("Edad", 21)
+
+        console.log(mapa)
+
+        //ES COMO UN MAPITA DE DATOS
+
+        console.log(mapa.size)
+
+        //PARA VERIFICAR SI EXISTE DENTRO DE LA COLECCION
+        console.log(mapa.has("correo"))
+        console.log(mapa.has("Nombre"))
+
+        //Si quiero tener solo un elemento, le puedo pedir la llave, es como si fuera un diccionario en python
+        console.log(mapa.get("Nombre")) // Se trae a Hazael
+
+        //Podemos actualizar la coleccion
+        mapa.set("Nombre", "Hazael pro xd")
+
+        //Se muestra como Hazael pro xd 
+        console.log(mapa.get("Nombre"))
+
+        //PODEMOS BORRAR TAMBIEN
+        mapa.delete("Apellido")
+        console.log(mapa)
+
+        //ES UN ELEMENTO ITERABLE
+
+        for(let [key, value] of mapa){
+            //PARA HACER TEMPLATE STRING option + LA TECLA A LA IZQUIERDA DEL ENTER
+            console.log(`Llave ${key}, y el valor ${value}`)
+        }
+
+        //SE PUEDEN HACER JALADAS MUY POCO UTILES
+
+        mapa.set(21, "elpepe")
+
+        console.log(mapa)
+        console.log(mapa.get(21))
+    
+
+
+
+
+    </script>
+    
+</body>
+</html>
