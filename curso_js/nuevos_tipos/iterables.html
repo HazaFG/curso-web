@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos tipos de datos en Javascript</title>
+</head>
+<body>
+    <h1>ITERABLES E ITERADORES EN Javascript</h1>
+
+    <script>
+        //CLASE NUMERO 53
+
+
+        //UNA VARIABLE O TIPO DE DATO ES ITERABLE, SIGNIFICA QUE ES LINEAL Y PUBLICO, POR LO TANTO SE PUEDE ITERAR
+
+        // EL ITERABLE ES EL ELEMENTO QUE SE ESTA RECORRIENDO, MIENTRAS QUE EL ITERADOR ES EL APUNTADOR QUE ESTA RECORRIENDO ESE OBJETO
+
+        const iterable = [1,2,3,4,5]
+        const iterablee = "Hola Yeya" // Una cadena de texto tambien es iterable
+
+        //Accedemos al iterador de nuestro iterable
+        const iterador = iterable[Symbol.iterator]();
+
+        console.log(iterable)
+        console.log(iterador)
+
+        //METODO PARA VER EL ELEMENTO Y SABER SI EL ARREGLO O EL ELEMENTO YA SE TERMINO
+
+        //Esto no es eficiente
+        // console.log(iterador.next())
+        // console.log(iterador.next())
+        // console.log(iterador.next())
+        // console.log(iterador.next())
+        // console.log(iterador.next())
+        // console.log(iterador.next())
+
+
+        //Vamoso a hacerlo con un while
+
+        let next = iterador.next()
+
+        while(!next.done){
+            console.log(next.value)
+
+            next = iterador.next()
+        }
+
+        
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

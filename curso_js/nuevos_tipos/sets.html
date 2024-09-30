@@ -9,11 +9,68 @@
     <h1>SETS EN Javascript</h1>
 
     <script>
+        //CLASE NUMERO 5O 
 
         // SETS ES UNA ESTRUCTURA SIMILAR A UN ARRAY PERO DE DATOS UNICOS
 
-        // Mira meto un commit innecesario
-        // PEPE
+        const set = new Set([1,2,3,3, 4, 5,5, true, false, {}, {}, "Hola", "HHOLA"])
+
+        console.log(set)
+
+        //Aqui no se usa length, se usa size
+        console.log(set.size)
+
+
+        //Creamos otro set
+        const set2 = new Set()
+
+        //Le agregamos elementos
+        set2.add(2)
+        set2.add(3)
+        set2.add(4)
+        set2.add(5)
+        set2.add(true)
+        set2.add(false)
+        set2.add(2) // Al estar repetido no aparece en la lista de los elementos de los set
+
+        console.log(set2)
+        console.log(set2.size)
+
+        console.log("\n")
+
+        for(item of set){
+            console.log(item)
+        }
+
+        console.log("\n")
+
+        set2.forEach(item => {
+            console.log(item)
+        });
+
+        // SET NO ES UN ARREGLO, PERO FUNCIONA EL FOREACH TAMBIEN
+
+        //Esto conviere al set en arreglo
+        let arr = Array.from(set)
+
+        console.log(arr)
+        console.log(arr[0])
+
+        //Borrar elementos de un set
+        set.delete("HHOLA")
+
+        console.log(set)
+
+        //metodo para comprobar si ese elemeto existe dentro de la coleccion
+        console.log(set.has("Hola")) //true
+        console.log(set.has("hola")) // false
+
+        //POR SI QUIERO LIMPIAR UN SET
+        set2.clear()
+        console.log(set2) //Se muestra vacio
+
+        
+
 
         
 
