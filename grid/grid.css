@@ -1,0 +1,28 @@
+.container {
+  background-color: lightsalmon;
+  border: 3px solid black;
+  border-radius: 10px;
+
+  /* xd, con esto ya hacemos una cuadricula */
+  display: grid;
+
+  /* joder, las fracciones son muy buenas */
+  grid-template-columns: 1fr 2fr;
+}
+
+/* Por defecto tiene display: block; */
+.container div {
+  background-color: lightblue;
+  border: 2px solid #09f;
+  border-radius: 6px;
+}
+
+
+
+
+
+
+
+body {
+  background: #ddd;
+}
