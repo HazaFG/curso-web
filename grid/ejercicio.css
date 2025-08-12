@@ -8,6 +8,8 @@ div {
       minmax(200px, 1fr));
   grid-column-gap: 16px;
   gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 body img {
