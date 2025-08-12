@@ -4,7 +4,8 @@ body {
 
 div {
   display: grid;
-  grid-template-columns: repeat(auto-fill,
+  /* cuando hay pocos elementos no se va a notar la diferencia entre auto-fit y auto-fill, pero basicamente auto-fit rellena todo el ancho de la pantalla, mientras que auto-fill si deja los espacios vacios */
+  grid-template-columns: repeat(auto-fit,
       minmax(200px, 1fr));
   grid-column-gap: 16px;
   gap: 16px;
