@@ -27,6 +27,12 @@
   grid-row-start: span 2;
 }
 
+.container div:nth-child(2) {
+  background: lightseagreen;
+  border: 2px solid blue;
+  grid-column-start: span 3;
+  grid-row-start: span 2;
+}
 
 body {
   background: #ddd;
