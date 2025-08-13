@@ -8,18 +8,19 @@
 
   /* joder, las fracciones son muy buenas */
   grid-auto-rows: 50px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 50px 50px 50px;
   gap: 4px;
   height: 300px;
+  width: 300px;
 
-  /* Esto alinea el elemento que haya, pero dentro de la cuadricula, en este caso, del div, va a centrar el contenido de la columna */
+  /* align-content: center; */
+  /* justify-content: center; */
+
+  place-content: center;
   /* justify-items: stretch; */
+  /* align-items: stretch; */
 
-
-
-  /* Este alinea el contenido pero de manera row, el otro es para col, este es para row, lo alinea */
-  align-items: start;
-  /* padding: 4px; */
+  /* eL CONTENIDO, ES TODO EL CONTENIDO, COMO LA CAJA, TODO EL CONTENIDO, EL ITEM, SERIA CADA UNO LOS ELEMENTOS */
 }
 
 /* "Cuantas mas media querys tengas, mas complejidad agregas" */
