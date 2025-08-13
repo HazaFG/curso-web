@@ -5,9 +5,18 @@
   min-height: 100vh;
 
   grid-template-areas:
-    "header header header"
+    "header header ."
     "sidebar content content"
     "footer footer footer"
+}
+
+@media(width < 500px) {
+  .container {
+    grid-template-areas:
+      "header header header"
+      "content content sidebar"
+      "footer footer footer"
+  }
 }
 
 .container header {
