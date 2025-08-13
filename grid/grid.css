@@ -13,7 +13,12 @@
   height: 300px;
 
   /* Esto alinea el elemento que haya, pero dentro de la cuadricula, en este caso, del div, va a centrar el contenido de la columna */
-  justify-items: stretch;
+  /* justify-items: stretch; */
+
+
+
+  /* Este alinea el contenido pero de manera row, el otro es para col, este es para row, lo alinea */
+  align-items: start;
   /* padding: 4px; */
 }
 
@@ -37,7 +42,7 @@
   /* grid-column: 1 / 3; */
   /* grid-row: 1 / 3; */
   z-index: 9999;
-  justify-self: end;
+  /* justify-self: end; */
 }
 
 .container div:nth-child(2) {
