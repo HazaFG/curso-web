@@ -23,10 +23,8 @@
 .container div:first-child {
   background: lightgreen;
   border: 2px solid green;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  grid-column-start: span 2;
+  grid-row-start: span 2;
 }
 
 
