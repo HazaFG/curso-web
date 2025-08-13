@@ -7,18 +7,22 @@
   display: grid;
 
   /* joder, las fracciones son muy buenas */
-  grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
   grid-auto-rows: 50px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 4px;
+  height: 300px;
+
+  /* Esto alinea el elemento que haya, pero dentro de la cuadricula, en este caso, del div, va a centrar el contenido de la columna */
+  justify-items: stretch;
   /* padding: 4px; */
 }
 
 /* "Cuantas mas media querys tengas, mas complejidad agregas" */
-@media(width < 500px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-}
+/* @media(width < 500px) { */
+/*   .container { */
+/*     grid-template-columns: 1fr; */
+/*   } */
+/* } */
 
 /* Por defecto tiene display: block; */
 .container div {
@@ -30,16 +34,17 @@
 .container div:first-child {
   background: lightgreen;
   border: 2px solid green;
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
+  /* grid-column: 1 / 3; */
+  /* grid-row: 1 / 3; */
   z-index: 9999;
+  justify-self: end;
 }
 
 .container div:nth-child(2) {
   background: lightseagreen;
   border: 2px solid blue;
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
+  /* grid-column: 1 / 3; */
+  /* grid-row: 1 / 3; */
   opacity: .5;
 }
 
